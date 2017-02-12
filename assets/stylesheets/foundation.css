@@ -7693,7 +7693,7 @@ input, label {
     #featured-hero .overlay a.custom-logo-link img {
       height: 200px;
       width: 200px;
-      margin: 5rem auto 3rem auto; }
+      margin: 8rem auto 3rem auto; }
 
 .home #featured-hero .overlay a.custom-logo-link img {
   height: 300px;
@@ -7701,8 +7701,9 @@ input, label {
   margin: 10rem auto 6rem auto; }
 
 .home .main-content {
-  font-size: 26px p;
-    font-size-margin-bottom: 1.6rem; }
+  font-size: 25px; }
+  .home .main-content p {
+    margin-bottom: 1.6rem; }
 
 .chaperone {
   max-width: 75rem;
