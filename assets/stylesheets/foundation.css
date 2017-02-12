@@ -6941,9 +6941,6 @@ a.thumbnail {
     margin-top: -3px;
     right: 1rem; }
 
-.off-canvas .menu .active > a {
-  background-color: #41525e; }
-
 .title-bar-title a {
   font-size: 1rem;
   color: #B9B9B9; }
@@ -6963,9 +6960,6 @@ a.thumbnail {
   line-height: 1; }
   .top-bar .menu a:hover:not(.button) {
     background-color: #42525D; }
-
-.top-bar .menu .active > a {
-  background-color: #41525e; }
 
 .top-bar .menu > li:not(.menu-text) > a {
   padding: 1rem; }
@@ -7661,5 +7655,83 @@ body#tinymce {
     @media print, screen and (min-width: 40em) {
         #single-post .main-content:last-child:not(:first-child) {
           float: right; } }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 20px; }
+
+h1, h2, h3, h4, h4, h5, h6 {
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif; }
+
+a {
+  color: #3c5dab;
+  font-weight: 400;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  a:hover {
+    color: #6788d6; }
+
+input, label {
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: inherit !important;
+  font-weight: inherit !important; }
+
+#featured-hero {
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+          background-size: cover;
+  height: auto;
+  text-align: center; }
+  #featured-hero .overlay {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
+    #featured-hero .overlay a.custom-logo-link img {
+      height: 200px;
+      width: 200px;
+      margin: 5rem auto 3rem auto; }
+
+.home #featured-hero .overlay a.custom-logo-link img {
+  height: 300px;
+  width: 300px;
+  margin: 10rem auto 6rem auto; }
+
+.home .main-content {
+  font-size: 26px p;
+    font-size-margin-bottom: 1.6rem; }
+
+.chaperone {
+  max-width: 75rem;
+  margin: auto; }
+
+#site-navigation.top-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 20px; }
+  #site-navigation.top-bar .top-bar-left * {
+    background: transparent; }
+  #site-navigation.top-bar .top-bar-right * {
+    background: transparent; }
+  #site-navigation.top-bar ul.menu li a {
+    height: auto;
+    font: inherit;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6); }
+    #site-navigation.top-bar ul.menu li a:hover {
+      background: rgba(0, 0, 0, 0.75);
+      color: rgba(255, 255, 255, 0.8); }
+
+.frm_form_field {
+  font-size: .9em; }
+  .frm_form_field .frm_primary_label {
+    font-weight: 400 !important; }
+  .frm_form_field input[type=radio] {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=foundation.css.map */

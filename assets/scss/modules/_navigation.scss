@@ -36,8 +36,6 @@
       }
   }
 
-  .menu .active > a { background-color: lighten($outer-space, 10%); }
-
 
 }
 
@@ -69,8 +67,6 @@
       background-color: #42525D;
     }
   }
-
-  .menu .active > a { background-color: lighten($outer-space, 10%); }
 
   .menu>li:not(.menu-text)>a { padding: 1rem; }
   .menu li:not(:last-child) { border-right: 1px solid #4e4e4e; }
