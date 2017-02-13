@@ -7735,4 +7735,7 @@ input, label {
   .frm_form_field input[type=radio] {
     margin-bottom: 0; }
 
+#footer-container {
+  border: none; }
+
 /*# sourceMappingURL=foundation.css.map */
