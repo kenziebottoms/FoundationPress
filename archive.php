@@ -15,9 +15,11 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header();
 
-<div id="page" role="main">
+get_template_part( 'template-parts/featured-image' ); ?>
+
+<div id="page-full-width" role="main">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 

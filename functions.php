@@ -51,3 +51,9 @@ require_once( 'library/responsive-images.php' );
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
 add_theme_support( 'custom-logo', array() );
+
+register_nav_menus( array(
+    'top_left' => 'Top Left',
+) );
+
+add_image_size('square', 400, 400, true);

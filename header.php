@@ -37,9 +37,7 @@
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
-				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-				</ul>
+				<?php wp_nav_menu(array('location' => 'top_left')); ?>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>

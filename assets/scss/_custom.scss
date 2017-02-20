@@ -46,6 +46,19 @@ input, label {
         }
     }
 }
+.main-content {
+    padding: 2.5rem 0;
+}
+#page-full-width {
+    margin: 3rem auto;
+    &.member {
+        img.wp-post-image {
+            width: 25%;
+            float: left;
+            margin-right: 2rem;
+        }
+    }
+}
 .home {
     #featured-hero {
         .overlay {
@@ -62,6 +75,17 @@ input, label {
         font-size: 25px;
         p {
             margin-bottom: 1.6rem;
+        }
+    }
+}
+.archive {
+    .members {
+        .member {
+            text-align: center;
+            font-size: 1.2em;
+            img {
+                margin-bottom: 1rem;
+            }
         }
     }
 }
@@ -110,5 +134,25 @@ input, label {
     }
 }
 #footer-container {
+    padding: 0;
     border: none;
+    margin: 0;
+    #footer {
+        padding: 0;
+    }
+}
+.material-icons {
+    vertical-align: middle;
+    &.md-18 {
+        font-size: 18px;
+    }
+    &.md-24 {
+        font-size: 24px;
+    }
+    &.md-36 {
+        font-size: 36px;
+    }
+    &.md-48 {
+        font-size: 48px;
+    }
 }

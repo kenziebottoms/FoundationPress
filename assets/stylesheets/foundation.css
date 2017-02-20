@@ -7695,6 +7695,16 @@ input, label {
       width: 200px;
       margin: 8rem auto 3rem auto; }
 
+.main-content {
+  padding: 2.5rem 0; }
+
+#page-full-width {
+  margin: 3rem auto; }
+  #page-full-width.member img.wp-post-image {
+    width: 25%;
+    float: left;
+    margin-right: 2rem; }
+
 .home #featured-hero .overlay a.custom-logo-link img {
   height: 300px;
   width: 300px;
@@ -7704,6 +7714,12 @@ input, label {
   font-size: 25px; }
   .home .main-content p {
     margin-bottom: 1.6rem; }
+
+.archive .members .member {
+  text-align: center;
+  font-size: 1.2em; }
+  .archive .members .member img {
+    margin-bottom: 1rem; }
 
 .chaperone {
   max-width: 75rem;
@@ -7736,6 +7752,21 @@ input, label {
     margin-bottom: 0; }
 
 #footer-container {
-  border: none; }
+  padding: 0;
+  border: none;
+  margin: 0; }
+  #footer-container #footer {
+    padding: 0; }
+
+.material-icons {
+  vertical-align: middle; }
+  .material-icons.md-18 {
+    font-size: 18px; }
+  .material-icons.md-24 {
+    font-size: 24px; }
+  .material-icons.md-36 {
+    font-size: 36px; }
+  .material-icons.md-48 {
+    font-size: 48px; }
 
 /*# sourceMappingURL=foundation.css.map */
