@@ -7699,11 +7699,30 @@ input, label {
   padding: 2.5rem 0; }
 
 #page-full-width {
-  margin: 3rem auto; }
+  margin: 5rem auto; }
+  #page-full-width .main-content {
+    padding: 0; }
   #page-full-width.member img.wp-post-image {
     width: 25%;
     float: left;
     margin-right: 2rem; }
+
+.faq .q, .faq .a {
+  float: left;
+  position: relative;
+  left: -3rem;
+  margin-right: -3rem; }
+
+.faq h3 {
+  color: #3c5dab; }
+
+.faq .a {
+  color: #000; }
+
+.faq .main-content {
+  margin-top: 2rem; }
+  .faq .main-content .entry-content {
+    margin-top: 1rem; }
 
 .home #featured-hero .overlay a.custom-logo-link img {
   height: 300px;
@@ -7711,6 +7730,8 @@ input, label {
   margin: 10rem auto 6rem auto; }
 
 .home .main-content {
+  padding: 0;
+  margin: 0;
   font-size: 25px; }
   .home .main-content p {
     margin-bottom: 1.6rem; }
