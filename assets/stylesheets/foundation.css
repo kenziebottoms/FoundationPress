@@ -7707,6 +7707,11 @@ input, label {
     float: left;
     margin-right: 2rem; }
 
+#map {
+  height: 600px;
+  width: 80%;
+  margin: auto; }
+
 .faq .q, .faq .a {
   float: left;
   position: relative;
