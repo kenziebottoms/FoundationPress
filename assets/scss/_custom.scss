@@ -2,7 +2,7 @@ $font-stack: 'Source Sans Pro', sans-serif;
 $header-stack: 'Bevan', serif;
 $red: #8f332e;
 $blue: #3c5dab;
-$blue-hl: #6788d6;
+$blue-hl: saturate(lighten($blue,15%), 15%);
 
 body {
     font-family: $font-stack;
@@ -184,5 +184,85 @@ input, label {
     }
     &.md-48 {
         font-size: 48px;
+    }
+}
+
+// event calendar
+
+.tribe-events-button {
+    background: $blue !important;
+    transition: .2s;
+    &:hover {
+        background: $blue-hl !important;
+    }
+}
+.tribe-events-calendar {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    thead {
+        border: none;
+        tr {
+            th {
+                font-size: 1.2rem;
+                text-transform: none;
+                font-weight: 100;
+                background-color: $blue;
+                padding: .75rem;
+                letter-spacing: 0;
+                border: none;
+            }
+        }
+    }
+    tbody {
+        border: none !important;
+        tr {
+            td {
+                border-left: none !important;
+                border-right: none !important;
+                border-top: none !important;
+                border-bottom: none !important;
+                background: #f9f9f9 !important;
+                transition: .2s !important;
+                &:hover {
+                    box-shadow: none !important;
+                    background: #fff !important;
+                }
+                [id*='tribe-events-daynum-'] {
+                    color: #999 !important;
+                    background: transparent !important;
+                }
+                &.tribe-events-othermonth {
+                    background: #eee !important;
+                    [id*='tribe-events-daynum-'] {
+                        background: transparent !important;
+                    }
+                }
+                &.tribe-events-present {
+                    [id*='tribe-events-daynum-'] {
+                        background: $blue-hl !important;
+                        color: #fff !important;
+                    }
+                }
+                &.tribe-events-has-events {
+                    [id*='tribe-events-daynum-'] {
+                        background: saturate(lighten($blue-hl,20%),10%) !important;
+                        color: #fff !important;
+                        a {
+                            background: transparent;
+                        }
+                    }
+                }
+                .tribe-events-tooltip {
+                    h4 {
+                        color: $blue !important;
+                    }
+                    .tribe-events-event-body {
+                        font-size: 13px !important;
+                    }
+                }
+            }
+        }
     }
 }

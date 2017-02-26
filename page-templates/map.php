@@ -19,6 +19,7 @@ get_header(); ?>
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 22,
         center: latLng,
+        scrollwheel: false,
       });
       var makerspaceCoords = [
         {lat: 36.176709, lng: -86.753075},
