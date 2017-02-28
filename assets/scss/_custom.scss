@@ -64,8 +64,20 @@ input, label {
 }
 #map {
     height: 600px;
-    width: 80%;
-    margin: auto;
+}
+#legend {
+    .legend {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        float: left;
+        &.blue {
+            background: rgba(#33f,.3);
+        }
+        &.red {
+            background: rgba(#5a5,.3);
+        }
+    }
 }
 .faq {
     .q, .a {

@@ -7708,9 +7708,17 @@ input, label {
     margin-right: 2rem; }
 
 #map {
-  height: 600px;
-  width: 80%;
-  margin: auto; }
+  height: 600px; }
+
+#legend .legend {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  float: left; }
+  #legend .legend.blue {
+    background: rgba(51, 51, 255, 0.3); }
+  #legend .legend.red {
+    background: rgba(85, 170, 85, 0.3); }
 
 .faq .q, .faq .a {
   float: left;
