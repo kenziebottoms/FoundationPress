@@ -7671,7 +7671,8 @@ a {
   -webkit-transition: .2s;
   transition: .2s; }
   a:hover {
-    color: #5a80da; }
+    color: #5a80da;
+    text-decoration: none; }
 
 input, label {
   font-family: "Source Sans Pro", sans-serif !important;
@@ -7858,5 +7859,11 @@ input, label {
         color: #3c5dab !important; }
       .tribe-events-calendar tbody tr td .tribe-events-tooltip .tribe-events-event-body {
         font-size: 13px !important; }
+
+.breadcrumbs a {
+  color: #3c5dab !important; }
+  .breadcrumbs a:hover {
+    color: #5a80da !important;
+    text-decoration: none !important; }
 
 /*# sourceMappingURL=foundation.css.map */

@@ -19,6 +19,7 @@ a {
     transition: .2s;
     &:hover {
         color: $blue-hl;
+        text-decoration: none;
     }
 }
 input, label {
@@ -275,6 +276,15 @@ input, label {
                     }
                 }
             }
+        }
+    }
+}
+.breadcrumbs {
+    a {
+        color: $blue !important;
+        &:hover {
+            color: $blue-hl !important;
+            text-decoration: none !important;
         }
     }
 }
