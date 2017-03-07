@@ -58,8 +58,9 @@ input, label {
     &.member {
         img.wp-post-image {
             width: 25%;
-            float: left;
-            margin-right: 2rem;
+            float: right;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
         }
     }
 }
