@@ -7,7 +7,7 @@ $blue-hl: saturate(lighten($blue,15%), 15%);
 body {
     font-family: $font-stack;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 17px;
 }
 h1, h2, h3, h4, h4, h5, h6 {
     font-weight: 400;
@@ -33,6 +33,8 @@ input, label {
     height: auto;
     text-align: center;
     .overlay {
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: 0;
         width: 100%;
@@ -43,6 +45,48 @@ input, label {
                 height: 200px;
                 width: 200px;
                 margin: 8rem auto 3rem auto;
+            }
+        }
+        .bottom-menus {
+            font-size: 1.1rem;
+            background: rgba(#fff,.8);
+            ul {
+                li {
+                    a {
+                        padding: 1rem;
+                        font-size: 1.2rem;
+                        color: rgba(#000,.7);
+                        &:hover {
+                            background: rgba(#fff,.7);
+                        }
+                    }
+                }
+            }
+            .left {
+                float: left;
+                li:not(:last-child) {
+                    border-right: 1px solid rgba(#fff,0.5);
+                }
+            }
+            .right {
+                float: right;
+                li:not(:first-child) {
+                    border-left: 1px solid rgba(#fff,0.5);
+                }
+            }
+            .blue a {
+                background: rgba($blue,.7);
+                color: rgba(#fff,.9);
+                &:hover {
+                    background: rgba($blue, .9);
+                }
+            }
+            .red a {
+                background: rgba($red,.7);
+                color: rgba(#fff,.9);
+                &:hover {
+                    background: rgba($red, .9);
+                }
             }
         }
     }
@@ -116,7 +160,7 @@ input, label {
     .main-content {
         padding: 0;
         margin: 0;
-        font-size: 25px;
+        font-size: 1.2rem;
         p {
             margin-bottom: 1.6rem;
         }
@@ -125,11 +169,17 @@ input, label {
 .archive {
     .members {
         .member {
-            text-align: center;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            margin: .5rem auto;
             img {
-                margin-bottom: 1rem;
+                float: left;
+                height: 120px;
+                width: 120px;
+                margin-right: 1rem;
             }
+        }
+        .columns:last-child:not(:first-child) {
+            float: left !important;
         }
     }
 }
@@ -142,7 +192,7 @@ input, label {
     width: 100%;
     z-index: 3000;
     background: rgba(#000,.7);
-    font-size: 20px;
+    font-size: 1.2rem;
     .top-bar-left {
         * {
             background: transparent;
@@ -253,12 +303,6 @@ input, label {
                         background: transparent !important;
                     }
                 }
-                &.tribe-events-present {
-                    [id*='tribe-events-daynum-'] {
-                        background: $blue-hl !important;
-                        color: #fff !important;
-                    }
-                }
                 &.tribe-events-has-events {
                     [id*='tribe-events-daynum-'] {
                         background: saturate(lighten($blue-hl,20%),10%) !important;
@@ -266,6 +310,12 @@ input, label {
                         a {
                             background: transparent;
                         }
+                    }
+                }
+                &.tribe-events-present {
+                    [id*='tribe-events-daynum-'] {
+                        background: $blue-hl !important;
+                        color: #fff !important;
                     }
                 }
                 .tribe-events-tooltip {

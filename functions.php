@@ -54,6 +54,8 @@ add_theme_support( 'custom-logo', array() );
 
 register_nav_menus( array(
     'top_left' => 'Top Left',
+    'bottom_left' => 'Bottom Left',
+    'bottom_right' => 'Bottom Right',
 ) );
 
 add_image_size('square', 400, 400, true);

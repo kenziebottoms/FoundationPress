@@ -31,12 +31,16 @@ get_template_part( 'template-parts/featured-image' ); ?>
 
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
-            <div class="large-3 medium-6 small-12 columns member">
+            <div class="large-6 medium-6 small-12 columns member">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('square'); ?>
                 </a>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <h4><?php the_field('level'); ?></h4>
+                <?php if (get_field('level') == 'Council Member') { ?>
+                    <strong><?php the_field('position_title'); ?></strong>
+                <?php } else { ?>
+                    <strong><?php the_field('level'); ?></strong>                
+                <?php } ?>
                 <p>
                     <?php the_field('areas_of_expertise'); ?>
                 </p>

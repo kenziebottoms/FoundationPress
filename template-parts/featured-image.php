@@ -13,6 +13,15 @@ if ( has_post_thumbnail( $post->ID ) && !is_archive() && ($post->post_type != 'm
             <div class="chaperone">
                 <?php the_custom_logo(); ?>
             </div>
+
+            <div class="bottom-menus">
+                <div class="left">
+                    <?php wp_nav_menu(array('theme_location' => 'bottom_left')); ?>
+                </div>
+                <div class="right">
+                    <?php wp_nav_menu(array('theme_location' => 'bottom_right')); ?>
+                </div>
+            </div>
         </div>
     </header>
 <?php 

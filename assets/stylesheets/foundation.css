@@ -7659,7 +7659,7 @@ body#tinymce {
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
-  font-size: 20px; }
+  font-size: 17px; }
 
 h1, h2, h3, h4, h4, h5, h6 {
   font-weight: 400;
@@ -7686,6 +7686,13 @@ input, label {
   height: auto;
   text-align: center; }
   #featured-hero .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     top: 0;
     width: 100%;
@@ -7695,6 +7702,33 @@ input, label {
       height: 200px;
       width: 200px;
       margin: 8rem auto 3rem auto; }
+    #featured-hero .overlay .bottom-menus {
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.8); }
+      #featured-hero .overlay .bottom-menus ul li a {
+        padding: 1rem;
+        font-size: 1.2rem;
+        color: rgba(0, 0, 0, 0.7); }
+        #featured-hero .overlay .bottom-menus ul li a:hover {
+          background: rgba(255, 255, 255, 0.7); }
+      #featured-hero .overlay .bottom-menus .left {
+        float: left; }
+        #featured-hero .overlay .bottom-menus .left li:not(:last-child) {
+          border-right: 1px solid rgba(255, 255, 255, 0.5); }
+      #featured-hero .overlay .bottom-menus .right {
+        float: right; }
+        #featured-hero .overlay .bottom-menus .right li:not(:first-child) {
+          border-left: 1px solid rgba(255, 255, 255, 0.5); }
+      #featured-hero .overlay .bottom-menus .blue a {
+        background: rgba(60, 93, 171, 0.7);
+        color: rgba(255, 255, 255, 0.9); }
+        #featured-hero .overlay .bottom-menus .blue a:hover {
+          background: rgba(60, 93, 171, 0.9); }
+      #featured-hero .overlay .bottom-menus .red a {
+        background: rgba(143, 51, 46, 0.7);
+        color: rgba(255, 255, 255, 0.9); }
+        #featured-hero .overlay .bottom-menus .red a:hover {
+          background: rgba(143, 51, 46, 0.9); }
 
 .main-content {
   padding: 2.5rem 0; }
@@ -7747,15 +7781,21 @@ input, label {
 .home .main-content {
   padding: 0;
   margin: 0;
-  font-size: 25px; }
+  font-size: 1.2rem; }
   .home .main-content p {
     margin-bottom: 1.6rem; }
 
 .archive .members .member {
-  text-align: center;
-  font-size: 1.2em; }
+  font-size: 1.1em;
+  margin: .5rem auto; }
   .archive .members .member img {
-    margin-bottom: 1rem; }
+    float: left;
+    height: 120px;
+    width: 120px;
+    margin-right: 1rem; }
+
+.archive .members .columns:last-child:not(:first-child) {
+  float: left !important; }
 
 .chaperone {
   max-width: 75rem;
@@ -7766,7 +7806,7 @@ input, label {
   width: 100%;
   z-index: 3000;
   background: rgba(0, 0, 0, 0.7);
-  font-size: 20px; }
+  font-size: 1.2rem; }
   #site-navigation.top-bar .top-bar-left * {
     background: transparent; }
   #site-navigation.top-bar .top-bar-right * {
@@ -7848,14 +7888,14 @@ input, label {
         background: #eee !important; }
         .tribe-events-calendar tbody tr td.tribe-events-othermonth [id*='tribe-events-daynum-'] {
           background: transparent !important; }
-      .tribe-events-calendar tbody tr td.tribe-events-present [id*='tribe-events-daynum-'] {
-        background: #5a80da !important;
-        color: #fff !important; }
       .tribe-events-calendar tbody tr td.tribe-events-has-events [id*='tribe-events-daynum-'] {
         background: #a8bef1 !important;
         color: #fff !important; }
         .tribe-events-calendar tbody tr td.tribe-events-has-events [id*='tribe-events-daynum-'] a {
           background: transparent; }
+      .tribe-events-calendar tbody tr td.tribe-events-present [id*='tribe-events-daynum-'] {
+        background: #5a80da !important;
+        color: #fff !important; }
       .tribe-events-calendar tbody tr td .tribe-events-tooltip h4 {
         color: #3c5dab !important; }
       .tribe-events-calendar tbody tr td .tribe-events-tooltip .tribe-events-event-body {

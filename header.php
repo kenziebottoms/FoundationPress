@@ -37,7 +37,7 @@
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
-				<?php wp_nav_menu(array('location' => 'top_left')); ?>
+				<?php wp_nav_menu(array('theme_location' => 'top_left')); ?>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
