@@ -62,4 +62,53 @@ add_image_size('square', 400, 400, true);
 
 
 /** settings page */
-include( 'options.php' );
+function mn_register_settings() {
+    register_setting( 'social_links', 'facebook' );
+    register_setting( 'social_links', 'twitter' );
+    register_setting( 'social_links', 'instagram' );
+}
+
+add_action( 'admin_init', 'mn_register_settings' );
+
+function mn_theme_options() {
+    add_theme_page('Theme Options', 'Theme Options', 'edit_theme_options', 'theme_options', 'mn_theme_options_page');
+}
+
+add_action('admin_menu', 'mn_theme_options');
+
+function mn_theme_options_page() {
+    if (!isset($_REQUEST['updated'])) {
+        $_REQUEST['updated'] = false;
+    } ?>
+    <div class='wrap'>
+        <?php screen_icon();
+        echo '<h2>Make Nashville Theme Options</h2>';
+        ?>
+        <form method="post" action="options.php">
+            <?php settings_fields('social_links');
+            do_settings_sections('social_links'); ?>
+            <h3>Social Links</h3>
+            <table class="form-table">
+                <tr>
+                    <th>Facebook</th>
+                    <td>
+                        <input type='text' name='facebook' value='<?php echo esc_attr(get_option('facebook')); ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Instagram</th>
+                    <td>
+                        <input type='text' name='instagram' value='<?php echo esc_attr(get_option('instagram')); ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Twitter</th>
+                    <td>
+                        <input type='text' name='twitter' value='<?php echo esc_attr(get_option('twitter')); ?>' />
+                    </td>
+                </tr>
+            </table>
+            <?php submit_button(); ?>
+        </form>
+    </div>
+<?php }

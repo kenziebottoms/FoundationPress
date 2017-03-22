@@ -13,6 +13,12 @@
 		</section>
 		<div id="footer-container" class="row">
 			<div class="large-6 medium-6 small-12 columns">
+				<?php $fb = get_option('facebook');
+				$insta = get_option('instagram');
+				$tw = get_option('twitter'); ?>
+				<?php if ($fb != '') { ?>
+					<a href='<?php echo $fb; ?>'>Facebook</a>
+				<?php } ?>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
 			</div>
 			<div class="large-6 medium-6 small-12 columns">
