@@ -59,3 +59,7 @@ register_nav_menus( array(
 ) );
 
 add_image_size('square', 400, 400, true);
+
+
+/** settings page */
+include( 'options.php' );

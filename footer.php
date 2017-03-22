@@ -11,11 +11,13 @@
 ?>
 
 		</section>
-		<div id="footer-container">
-			<footer id="footer">
+		<div id="footer-container" class="row">
+			<div class="large-6 medium-6 small-12 columns">
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
-			</footer>
-			<?php dynamic_sidebar( 'map' ); ?>
+			</div>
+			<div class="large-6 medium-6 small-12 columns">
+				<?php dynamic_sidebar( 'map' ); ?>
+			</div>
 		</div>
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>
