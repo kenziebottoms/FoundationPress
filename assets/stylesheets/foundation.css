@@ -7704,7 +7704,7 @@ input, label {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3); }
-    #featured-hero .overlay a.custom- logo-link img {
+    #featured-hero .overlay a.custom-logo-link img {
       height: 200px;
       width: 200px;
       margin: 8rem auto 3rem auto; }
@@ -7843,6 +7843,8 @@ input, label {
   text-align: center; }
   #footer-container .widget {
     clear: both; }
+    #footer-container .widget a {
+      color: inherit; }
   #footer-container .columns {
     padding: 0; }
     #footer-container .columns:first-child {
@@ -7939,5 +7941,10 @@ input, label {
   .breadcrumbs a:hover {
     color: #5a80da !important;
     text-decoration: none !important; }
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 24%;
+  padding: 0 1% 1% 0;
+  float: left; }
 
 /*# sourceMappingURL=foundation.css.map */

@@ -59,7 +59,12 @@ register_nav_menus( array(
 ) );
 
 add_image_size('square', 400, 400, true);
-
+function my_custom_sizes($sizes) {
+    return array_merge($sizes, array(
+        'square' => __('Square'),
+    ));
+}
+add_filter('image_size_names_choose', 'my_custom_sizes');
 
 /** settings page */
 function mn_register_settings() {
