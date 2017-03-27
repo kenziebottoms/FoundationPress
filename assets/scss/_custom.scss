@@ -117,6 +117,13 @@ input, label {
             margin-bottom: 1rem;
         }
     }
+    &.project {
+        img.wp-post-image {
+            margin: 2rem auto;
+            float: none;
+            display: block;
+        }
+    }
 }
 #map {
     height: 600px;
@@ -190,6 +197,18 @@ input, label {
         }
         .columns:last-child:not(:first-child) {
             float: left !important;
+        }
+    }
+    .projects {
+        .project {
+            text-align: center;
+            h3 {
+                padding-top: 1rem;
+            }
+            p.maker {
+                margin: .15rem auto;
+                font-size: 1.3rem;
+            }
         }
     }
 }

@@ -7748,6 +7748,10 @@ input, label {
     float: right;
     margin-left: 2rem;
     margin-bottom: 1rem; }
+  #page-full-width.project img.wp-post-image {
+    margin: 2rem auto;
+    float: none;
+    display: block; }
 
 #map {
   height: 600px; }
@@ -7802,6 +7806,14 @@ input, label {
 
 .archive .members .columns:last-child:not(:first-child) {
   float: left !important; }
+
+.archive .projects .project {
+  text-align: center; }
+  .archive .projects .project h3 {
+    padding-top: 1rem; }
+  .archive .projects .project p.maker {
+    margin: .15rem auto;
+    font-size: 1.3rem; }
 
 .chaperone {
   max-width: 75rem;
