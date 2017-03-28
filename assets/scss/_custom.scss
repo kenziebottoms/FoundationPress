@@ -210,6 +210,9 @@ input, label {
                 font-size: 1.3rem;
             }
         }
+        .columns:last-child:not(:first-child) {
+            float: left !important;
+        }
     }
 }
 .chaperone {

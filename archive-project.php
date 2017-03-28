@@ -33,7 +33,11 @@ get_template_part( 'template-parts/featured-image' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="large-3 medium-4 small-12 columns project">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('square'); ?>
+                    <?php if (has_post_thumbnail()) {
+                        the_post_thumbnail  ('square');
+                    } else { ?>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/none.jpg" />
+                    <?php } ?>
                 </a>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php $members = get_field('makers');
