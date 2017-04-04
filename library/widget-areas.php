@@ -29,6 +29,16 @@ function foundationpress_sidebar_widgets() {
 	));
 
 	register_sidebar(array(
+	  'id' => 'subfooter',
+	  'name' => __( 'Above the footer', 'foundationpress' ),
+	  'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
+	  'before_widget' => '<article id="%1$s" class="widget %2$s">',
+	  'after_widget' => '</article>',
+	  'before_title' => '',
+	  'after_title' => '',
+	));
+
+	register_sidebar(array(
 	  'id' => 'map',
 	  'name' => __( 'Footer map', 'foundationpress' ),
 	  'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),

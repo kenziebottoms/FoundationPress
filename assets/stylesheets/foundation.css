@@ -7665,6 +7665,9 @@ h1, h2, h3, h4, h4, h5, h6 {
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif; }
 
+hr.spacer {
+  border-color: transparent; }
+
 a {
   color: #3c5dab;
   font-weight: 400;
@@ -7673,6 +7676,15 @@ a {
   a:hover {
     color: #5a80da;
     text-decoration: none; }
+  a.button {
+    background: #3c5dab;
+    font-size: 1.1rem; }
+    a.button:hover {
+      background: #5a80da; }
+    a.button.red {
+      background: #ae4742; }
+      a.button.red:hover {
+        background: #d86a64; }
 
 @media screen and (min-width: 64em) {
   .row .columns:first-child {
@@ -7707,13 +7719,13 @@ input, label {
     #featured-hero .overlay a.custom-logo-link img {
       height: 200px;
       width: 200px;
-      margin: 8rem auto 3rem auto; }
+      margin: 7rem auto 3rem auto; }
     #featured-hero .overlay .bottom-menus {
       font-size: 1.1rem;
       background: rgba(255, 255, 255, 0.8); }
       #featured-hero .overlay .bottom-menus ul li a {
-        padding: 1rem;
-        font-size: 1.2rem;
+        padding: .9rem;
+        font-size: 1.15rem;
         color: rgba(0, 0, 0, 0.7); }
         #featured-hero .overlay .bottom-menus ul li a:hover {
           background: rgba(255, 255, 255, 0.7); }
@@ -7731,10 +7743,10 @@ input, label {
         #featured-hero .overlay .bottom-menus .blue a:hover {
           background: rgba(60, 93, 171, 0.9); }
       #featured-hero .overlay .bottom-menus .red a {
-        background: rgba(143, 51, 46, 0.7);
+        background: rgba(174, 71, 66, 0.7);
         color: rgba(255, 255, 255, 0.9); }
         #featured-hero .overlay .bottom-menus .red a:hover {
-          background: rgba(143, 51, 46, 0.9); }
+          background: rgba(174, 71, 66, 0.9); }
 
 .main-content {
   padding: 2.5rem 0; }
@@ -7784,9 +7796,8 @@ input, label {
     margin-top: 1rem; }
 
 .home #featured-hero .overlay a.custom-logo-link img {
-  height: 300px;
-  width: 300px;
-  margin: 10rem auto 6rem auto; }
+  height: 250px;
+  width: 250px; }
 
 .home .main-content {
   padding: 0;
@@ -7827,19 +7838,31 @@ input, label {
   width: 100%;
   z-index: 3000;
   background: rgba(0, 0, 0, 0.7);
-  font-size: 1.2rem; }
+  font-size: 1.1rem; }
   #site-navigation.top-bar .top-bar-left * {
     background: transparent; }
+  #site-navigation.top-bar .top-bar-left .dropdown {
+    text-align: left; }
   #site-navigation.top-bar .top-bar-right * {
     background: transparent; }
-  #site-navigation.top-bar ul.menu li a {
+  #site-navigation.top-bar .top-bar-right .dropdown {
+    text-align: right; }
+  #site-navigation.top-bar ul.menu > li > a {
     height: auto;
     font: inherit;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.6); }
-    #site-navigation.top-bar ul.menu li a:hover {
+    color: rgba(255, 255, 255, 0.6);
+    padding: .8rem; }
+    #site-navigation.top-bar ul.menu > li > a:hover {
       background: rgba(0, 0, 0, 0.75);
       color: rgba(255, 255, 255, 0.8); }
+  #site-navigation.top-bar ul.menu > li ul.dropdown {
+    background: rgba(0, 0, 0, 0.5) !important;
+    min-width: 100%; }
+    #site-navigation.top-bar ul.menu > li ul.dropdown li {
+      width: 100%; }
+      #site-navigation.top-bar ul.menu > li ul.dropdown li a {
+        padding: 1rem 2rem; }
 
 .frm_form_field {
   font-size: .9em; }
@@ -7848,13 +7871,39 @@ input, label {
   .frm_form_field input[type=radio] {
     margin-bottom: 0; }
 
+#subfooter {
+  background: #ddd;
+  padding: 1.25rem 0;
+  font-size: 1.1rem; }
+  #subfooter * {
+    font-size: 1.1rem; }
+  #subfooter #mc_embed_signup {
+    background: transparent; }
+    #subfooter #mc_embed_signup input {
+      border-radius: 0;
+      font-weight: 100 !important;
+      padding: .75rem 1rem !important;
+      height: auto;
+      line-height: 1.5;
+      border: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      display: inline-block;
+      letter-spacing: 0;
+      margin: 0; }
+    #subfooter #mc_embed_signup input[type=submit] {
+      background: #3c5dab;
+      margin-left: -5px; }
+      #subfooter #mc_embed_signup input[type=submit]:hover {
+        background: #5a80da; }
+
 #footer-container {
   padding: 0;
   border: none;
   margin: 0;
   background: #444;
   color: #ccc;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center; }
   #footer-container .widget {
     clear: both; }
@@ -7894,6 +7943,15 @@ input, label {
     font-size: 36px; }
   .material-icons.md-48 {
     font-size: 48px; }
+
+h1.header, h2.header, h3.header, h4.header, h5.header, h6.header {
+  background: #3c5dab;
+  color: rgba(255, 255, 255, 0.85);
+  padding: .25em;
+  font-weight: 100;
+  text-align: center; }
+  h1.header.red, h2.header.red, h3.header.red, h4.header.red, h5.header.red, h6.header.red {
+    background: #ae4742; }
 
 .tribe-events-button {
   background: #3c5dab !important;
@@ -7959,6 +8017,11 @@ input, label {
 
 .gallery.gallery-columns-4 .gallery-item {
   width: 24%;
+  padding: 0 1% 1% 0;
+  float: left; }
+
+.gallery.gallery-columns-5 .gallery-item {
+  width: 19%;
   padding: 0 1% 1% 0;
   float: left; }
 

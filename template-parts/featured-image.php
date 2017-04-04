@@ -4,8 +4,8 @@
 if ( has_post_thumbnail( $post->ID ) && !is_archive() && ($post->post_type != 'members') ) { 
     $id = $post->ID;
 } else {
-    $home = get_page_by_path('learn-stuff-build-things');
-    $id = $home->ID;
+    $home = get_page_by_path('make-nashville');
+    if ($home) { $id = $home->ID; }
 } ?>
 
     <header id="featured-hero" role="banner" data-interchange="[<?php echo get_the_post_thumbnail_url($id, 'featured-small'); ?>, small], [<?php echo get_the_post_thumbnail_url($id, 'featured-medium'); ?>, medium], [<?php echo get_the_post_thumbnail_url($id, 'featured-large'); ?>, large], [<?php echo get_the_post_thumbnail_url($id, 'featured-xlarge'); ?>, xlarge]">

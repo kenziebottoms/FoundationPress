@@ -1,6 +1,7 @@
 $font-stack: 'Source Sans Pro', sans-serif;
 $header-stack: 'Bevan', serif;
-$red: #8f332e;
+$red: #ae4742;
+$red-hl: saturate(lighten($red,15%), 15%);
 $blue: #3c5dab;
 $blue-hl: saturate(lighten($blue,15%), 15%);
 
@@ -13,6 +14,9 @@ h1, h2, h3, h4, h4, h5, h6 {
     font-weight: 400;
     font-family: $font-stack;
 }
+hr.spacer {
+    border-color: transparent;
+}
 a {
     color: $blue;
     font-weight: 400;
@@ -20,6 +24,19 @@ a {
     &:hover {
         color: $blue-hl;
         text-decoration: none;
+    }
+    &.button {
+        background: $blue;
+        font-size: 1.1rem;
+        &:hover {
+            background: $blue-hl;
+        }
+        &.red {
+            background: $red;
+            &:hover {
+                background: $red-hl;
+            }
+        }
     }
 }
 @include breakpoint(large up) {
@@ -54,7 +71,7 @@ input, label {
             img {
                 height: 200px;
                 width: 200px;
-                margin: 8rem auto 3rem auto;
+                margin: 7rem auto 3rem auto;
             }
         }
         .bottom-menus {
@@ -63,8 +80,8 @@ input, label {
             ul {
                 li {
                     a {
-                        padding: 1rem;
-                        font-size: 1.2rem;
+                        padding: .9rem;
+                        font-size: 1.15rem;
                         color: rgba(#000,.7);
                         &:hover {
                             background: rgba(#fff,.7);
@@ -167,9 +184,8 @@ input, label {
         .overlay {
             a.custom-logo-link {
                 img {
-                    height: 300px;
-                    width: 300px;
-                    margin: 10rem auto 6rem auto;
+                    height: 250px;
+                    width: 250px;
                 }
             }
         }
@@ -224,27 +240,44 @@ input, label {
     width: 100%;
     z-index: 3000;
     background: rgba(#000,.7);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     .top-bar-left {
         * {
             background: transparent;
+        }
+        .dropdown {
+            text-align: left;
         }
     }
     .top-bar-right {
         * {
             background: transparent;
         }
+        .dropdown {
+            text-align: right;
+        }
     }
     ul.menu {
-        li {
-            a {
+        > li {
+            > a {
                 height: auto;
                 font: inherit;
                 font-weight: 400;
                 color: rgba(#fff, .6);
+                padding: .8rem;
                 &:hover {
                     background: rgba(#000,.75);
                     color: rgba(#fff, .8);
+                }
+            }
+            ul.dropdown {
+                background: rgba(#000,.5) !important;
+                min-width: 100%;
+                li {
+                    width: 100%;
+                    a {
+                        padding: 1rem 2rem;
+                    }
                 }
             }
         }
@@ -259,13 +292,43 @@ input, label {
         margin-bottom: 0;
     }
 }
+#subfooter {
+    background: #ddd;
+    padding: 1.25rem 0;
+    font-size: 1.1rem;
+    * {
+        font-size: 1.1rem;
+    }
+    #mc_embed_signup {
+        background: transparent;
+        input {
+            border-radius: 0;
+            font-weight: 100 !important;
+            padding: .75rem 1rem !important;
+            height: auto;
+            line-height: 1.5;
+            border: 0;
+            box-shadow: none;
+            display: inline-block;
+            letter-spacing: 0;
+            margin: 0;
+        }
+        input[type=submit] {
+            background: $blue;
+            margin-left: -5px;
+            &:hover {
+                background: $blue-hl;
+            }
+        }
+    }
+}
 #footer-container {
     padding: 0;
     border: none;
     margin: 0;
     background: #444;
     color: #ccc;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
     .widget {
         clear: both;
@@ -317,6 +380,18 @@ input, label {
     }
     &.md-48 {
         font-size: 48px;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    &.header {
+        background: $blue;
+        color: rgba(#fff,.85);
+        padding: .25em;
+        font-weight: 100;
+        text-align: center;
+        &.red {
+            background: $red;
+        }
     }
 }
 
@@ -412,6 +487,13 @@ input, label {
     &.gallery-columns-4 {
         .gallery-item {
             width: 24%;
+            padding: 0 1% 1% 0;
+            float: left;
+        }
+    }
+    &.gallery-columns-5 {
+        .gallery-item {
+            width: 19%;
             padding: 0 1% 1% 0;
             float: left;
         }

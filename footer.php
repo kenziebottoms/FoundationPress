@@ -11,6 +11,11 @@
 ?>
 
 		</section>
+		<div id="subfooter">
+			<div class="chaperone">
+				<?php dynamic_sidebar('subfooter'); ?>
+			</div>
+		</div>
 		<div id="footer-container" class="row">
 			<div class="large-6 medium-6 small-12 columns">
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
