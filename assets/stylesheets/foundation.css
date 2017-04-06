@@ -7686,6 +7686,12 @@ a {
       a.button.red:hover {
         background: #d86a64; }
 
+.big {
+  font-size: 1.3em;
+  font-weight: 100; }
+  .big a {
+    font-weight: 100; }
+
 @media screen and (min-width: 64em) {
   .row .columns:first-child {
     padding-left: 0; }
@@ -7720,32 +7726,30 @@ input, label {
       height: 200px;
       width: 200px;
       margin: 7rem auto 3rem auto; }
-    #featured-hero .overlay .bottom-menus {
+    #featured-hero .overlay #contact-bar {
       font-size: 1.1rem;
       background: rgba(255, 255, 255, 0.8); }
-      #featured-hero .overlay .bottom-menus ul li a {
-        padding: .9rem;
+      #featured-hero .overlay #contact-bar .left {
+        float: left; }
+      #featured-hero .overlay #contact-bar .right {
+        float: right; }
+      #featured-hero .overlay #contact-bar .left a, #featured-hero .overlay #contact-bar .right a {
+        font-weight: normal;
+        display: inline-block;
+        padding: .8rem;
         font-size: 1.15rem;
         color: rgba(0, 0, 0, 0.7); }
-        #featured-hero .overlay .bottom-menus ul li a:hover {
+        #featured-hero .overlay #contact-bar .left a:hover, #featured-hero .overlay #contact-bar .right a:hover {
           background: rgba(255, 255, 255, 0.7); }
-      #featured-hero .overlay .bottom-menus .left {
-        float: left; }
-        #featured-hero .overlay .bottom-menus .left li:not(:last-child) {
-          border-right: 1px solid rgba(255, 255, 255, 0.5); }
-      #featured-hero .overlay .bottom-menus .right {
-        float: right; }
-        #featured-hero .overlay .bottom-menus .right li:not(:first-child) {
-          border-left: 1px solid rgba(255, 255, 255, 0.5); }
-      #featured-hero .overlay .bottom-menus .blue a {
+      #featured-hero .overlay #contact-bar .blue a {
         background: rgba(60, 93, 171, 0.7);
         color: rgba(255, 255, 255, 0.9); }
-        #featured-hero .overlay .bottom-menus .blue a:hover {
+        #featured-hero .overlay #contact-bar .blue a:hover {
           background: rgba(60, 93, 171, 0.9); }
-      #featured-hero .overlay .bottom-menus .red a {
+      #featured-hero .overlay #contact-bar .red a {
         background: rgba(174, 71, 66, 0.7);
         color: rgba(255, 255, 255, 0.9); }
-        #featured-hero .overlay .bottom-menus .red a:hover {
+        #featured-hero .overlay #contact-bar .red a:hover {
           background: rgba(174, 71, 66, 0.9); }
 
 .main-content {
@@ -7837,7 +7841,7 @@ input, label {
   position: fixed;
   width: 100%;
   z-index: 3000;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   font-size: 1.1rem; }
   #site-navigation.top-bar .top-bar-left * {
     background: transparent; }
@@ -7856,13 +7860,23 @@ input, label {
     #site-navigation.top-bar ul.menu > li > a:hover {
       background: rgba(0, 0, 0, 0.75);
       color: rgba(255, 255, 255, 0.8); }
+  #site-navigation.top-bar ul.menu > li.blue a {
+    background: rgba(60, 93, 171, 0.55); }
+    #site-navigation.top-bar ul.menu > li.blue a:hover {
+      background: rgba(60, 93, 171, 0.7); }
+  #site-navigation.top-bar ul.menu > li.red a {
+    background: rgba(174, 71, 66, 0.55); }
+    #site-navigation.top-bar ul.menu > li.red a:hover {
+      background: rgba(174, 71, 66, 0.7); }
+  #site-navigation.top-bar ul.menu > li.red, #site-navigation.top-bar ul.menu > li.blue {
+    border-right-color: rgba(255, 255, 255, 0.5); }
   #site-navigation.top-bar ul.menu > li ul.dropdown {
     background: rgba(0, 0, 0, 0.5) !important;
     min-width: 100%; }
     #site-navigation.top-bar ul.menu > li ul.dropdown li {
       width: 100%; }
       #site-navigation.top-bar ul.menu > li ul.dropdown li a {
-        padding: 1rem 2rem; }
+        padding: .8rem 2rem; }
 
 .frm_form_field {
   font-size: .9em; }
@@ -7905,10 +7919,13 @@ input, label {
   color: #ccc;
   font-size: 1.2rem;
   text-align: center; }
+  #footer-container a {
+    color: inherit; }
+  #footer-container hr {
+    border-color: rgba(255, 255, 255, 0.2);
+    width: 50%; }
   #footer-container .widget {
     clear: both; }
-    #footer-container .widget a {
-      color: inherit; }
   #footer-container .columns {
     padding: 0; }
     #footer-container .columns:first-child {

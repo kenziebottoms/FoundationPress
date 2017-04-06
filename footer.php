@@ -19,6 +19,19 @@
 		<div id="footer-container" class="row">
 			<div class="large-6 medium-6 small-12 columns">
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<hr>
+				<p>
+					<a href="<?php echo get_option('maps_link'); ?>">
+						<?php echo get_option('address1'); ?><br/>
+						<?php echo get_option('address2'); ?>
+					</a>
+				</p>
+				<p class="big">
+					<?php $phone = get_option('phone'); ?>
+					<a href="tel:<?php echo $phone; ?>">
+						<?php echo $phone; ?>
+					</a>
+				</p>
 				<ul id="social">
 					<?php $fb = get_option('facebook');
 					$insta = get_option('instagram');

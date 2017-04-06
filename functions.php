@@ -68,9 +68,13 @@ add_filter('image_size_names_choose', 'my_custom_sizes');
 
 /** settings page */
 function mn_register_settings() {
-    register_setting( 'social_links', 'facebook' );
-    register_setting( 'social_links', 'twitter' );
-    register_setting( 'social_links', 'instagram' );
+    register_setting( 'mn', 'facebook' );
+    register_setting( 'mn', 'twitter' );
+    register_setting( 'mn', 'instagram' );
+    register_setting( 'mn', 'address1' );
+    register_setting( 'mn', 'address2' );
+    register_setting( 'mn', 'maps_link' );
+    register_setting( 'mn', 'phone' );
 }
 
 add_action( 'admin_init', 'mn_register_settings' );
@@ -86,12 +90,38 @@ function mn_theme_options_page() {
         $_REQUEST['updated'] = false;
     } ?>
     <div class='wrap'>
-        <?php screen_icon();
-        echo '<h2>Make Nashville Theme Options</h2>';
-        ?>
+        <?php screen_icon(); ?>
+        <h2>Make Nashville Theme Options</h2>
         <form method="post" action="options.php">
-            <?php settings_fields('social_links');
-            do_settings_sections('social_links'); ?>
+            <h3>Contact Info</h3>
+            <?php settings_fields('mn');
+            do_settings_sections('mn'); ?>
+            <table class="form-table">
+                <tr>
+                    <th>Address Line 1</th>
+                    <td>
+                        <input type='text' name='address1' value='<?php echo esc_attr(get_option('address1')); ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Address Line 2</th>
+                    <td>
+                        <input type='text' name='address2' value='<?php echo esc_attr(get_option('address2')); ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Google Maps Link</th>
+                    <td>
+                        <input type='text' name='maps_link' value='<?php echo esc_attr(get_option('maps_link')); ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Phone Number (no link)</th>
+                    <td>
+                        <input type='text' name='phone' value='<?php echo esc_attr(get_option('phone')); ?>' />
+                    </td>
+                </tr>
+            </table>
             <h3>Social Links</h3>
             <table class="form-table">
                 <tr>

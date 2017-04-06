@@ -39,6 +39,13 @@ a {
         }
     }
 }
+.big {
+    font-size: 1.3em;
+    font-weight: 100;
+    a {
+        font-weight: 100;
+    }
+}
 @include breakpoint(large up) {
     .row {
         .columns:first-child {
@@ -74,31 +81,25 @@ input, label {
                 margin: 7rem auto 3rem auto;
             }
         }
-        .bottom-menus {
+        #contact-bar {
             font-size: 1.1rem;
             background: rgba(#fff,.8);
-            ul {
-                li {
-                    a {
-                        padding: .9rem;
-                        font-size: 1.15rem;
-                        color: rgba(#000,.7);
-                        &:hover {
-                            background: rgba(#fff,.7);
-                        }
-                    }
-                }
-            }
             .left {
                 float: left;
-                li:not(:last-child) {
-                    border-right: 1px solid rgba(#fff,0.5);
-                }
             }
             .right {
                 float: right;
-                li:not(:first-child) {
-                    border-left: 1px solid rgba(#fff,0.5);
+            }
+            .left, .right {
+                a {
+                    font-weight: normal;
+                    display: inline-block;
+                    padding: .8rem;
+                    font-size: 1.15rem;
+                    color: rgba(#000,.7);
+                    &:hover {
+                        background: rgba(#fff,.7);
+                    }
                 }
             }
             .blue a {
@@ -239,7 +240,7 @@ input, label {
     position: fixed;
     width: 100%;
     z-index: 3000;
-    background: rgba(#000,.7);
+    background: rgba(#000,.8);
     font-size: 1.1rem;
     .top-bar-left {
         * {
@@ -270,13 +271,29 @@ input, label {
                     color: rgba(#fff, .8);
                 }
             }
+
+            &.blue a {
+                background: rgba($blue,.55);
+                &:hover {
+                    background: rgba($blue, .7);
+                }
+            }
+            &.red a {
+                background: rgba($red,.55);
+                &:hover {
+                    background: rgba($red, .7);
+                }
+            }
+            &.red, &.blue {
+                border-right-color: rgba(#fff,.5);
+            }
             ul.dropdown {
                 background: rgba(#000,.5) !important;
                 min-width: 100%;
                 li {
                     width: 100%;
                     a {
-                        padding: 1rem 2rem;
+                        padding: .8rem 2rem;
                     }
                 }
             }
@@ -330,11 +347,15 @@ input, label {
     color: #ccc;
     font-size: 1.2rem;
     text-align: center;
+    a {
+        color: inherit;
+    }
+    hr {
+        border-color: rgba(#fff, .2);
+        width: 50%;
+    }
     .widget {
         clear: both;
-        a {
-            color: inherit;
-        }
     }
     .columns {
         padding: 0;
