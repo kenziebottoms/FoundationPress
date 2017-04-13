@@ -2640,7 +2640,7 @@ button {
   display: none !important; }
 
 .row {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto; }
   .row::before, .row::after {
@@ -3531,7 +3531,7 @@ a {
 
 hr {
   clear: both;
-  max-width: 75rem;
+  max-width: 62.5rem;
   height: 0;
   margin: 1.25rem auto;
   border-top: 0;
@@ -5559,7 +5559,7 @@ html.is-reveal-open body {
   @media print, screen and (min-width: 40em) {
     .reveal {
       width: 600px;
-      max-width: 75rem; } }
+      max-width: 62.5rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal .reveal {
       right: auto;
@@ -5570,15 +5570,15 @@ html.is-reveal-open body {
   @media print, screen and (min-width: 40em) {
     .reveal.tiny {
       width: 30%;
-      max-width: 75rem; } }
+      max-width: 62.5rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal.small {
       width: 50%;
-      max-width: 75rem; } }
+      max-width: 62.5rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal.large {
       width: 90%;
-      max-width: 75rem; } }
+      max-width: 62.5rem; } }
   .reveal.full {
     top: 0;
     left: 0;
@@ -5878,7 +5878,7 @@ a.thumbnail {
 
 .title-bar {
   padding: 0.5rem;
-  background: #2c3840;
+  background: black;
   color: #fefefe; }
   .title-bar::before, .title-bar::after {
     display: table;
@@ -7000,7 +7000,7 @@ a.thumbnail {
   border-top: 1px solid #ccc;
   margin-top: 3.75rem; }
   #footer-container #footer {
-    max-width: 75rem;
+    max-width: 62.5rem;
     margin-right: auto;
     margin-left: auto;
     padding: 1.875rem 0; }
@@ -7042,7 +7042,7 @@ a.thumbnail {
 
 body#tinymce {
   height: auto;
-  max-width: 75rem;
+  max-width: 62.5rem;
   padding: 1.25rem !important; }
 
 .sites-button {
@@ -7114,7 +7114,7 @@ body#tinymce {
   position: relative;
   text-align: left; }
   #front-hero .marketing {
-    max-width: 75rem;
+    max-width: 62.5rem;
     margin-right: auto;
     margin-left: auto;
     max-width: 55rem; }
@@ -7224,7 +7224,7 @@ body#tinymce {
     margin-top: 1.25rem; }
 
 .intro {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto; }
   .intro::before, .intro::after {
@@ -7267,7 +7267,7 @@ body#tinymce {
           margin-bottom: 2rem; } }
 
 .section-divider {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto; }
   .section-divider::before, .section-divider::after {
@@ -7290,7 +7290,7 @@ body#tinymce {
       float: right; }
 
 .benefits {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   text-align: center; }
@@ -7377,7 +7377,7 @@ body#tinymce {
     .benefits .professional p {
       font-size: 0.9375rem; }
   .benefits .why-foundation {
-    max-width: 75rem;
+    max-width: 62.5rem;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -7398,7 +7398,7 @@ body#tinymce {
       float: right; }
 
 #kitchen-sink {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem; }
@@ -7501,7 +7501,7 @@ body#tinymce {
       background: #e1e1e1; }
 
 #page {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem; }
@@ -7536,7 +7536,7 @@ body#tinymce {
           float: right; } }
 
 #page-sidebar-left {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem; }
@@ -7600,7 +7600,7 @@ body#tinymce {
           float: right; } }
 
 #page-full-width {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem; }
@@ -7622,7 +7622,7 @@ body#tinymce {
       float: right; }
 
 #single-post {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem; }
@@ -7726,6 +7726,11 @@ input, label {
       height: 200px;
       width: 200px;
       margin: 7rem auto 3rem auto; }
+      @media screen and (max-width: 39.9375em) {
+        #featured-hero .overlay a.custom-logo-link img {
+          width: 130px;
+          height: 130px;
+          margin: 1rem auto; } }
     #featured-hero .overlay #contact-bar {
       font-size: 1.1rem;
       background: rgba(255, 255, 255, 0.8); }
@@ -7757,6 +7762,11 @@ input, label {
 
 #page-full-width {
   margin: 5rem auto; }
+  @media screen and (max-width: 63.9375em) {
+    #page-full-width {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: 3rem auto; } }
   #page-full-width .main-content {
     padding: 0; }
   #page-full-width.member img.wp-post-image {
@@ -7802,6 +7812,11 @@ input, label {
 .home #featured-hero .overlay a.custom-logo-link img {
   height: 250px;
   width: 250px; }
+  @media screen and (max-width: 39.9375em) {
+    .home #featured-hero .overlay a.custom-logo-link img {
+      height: 150px;
+      width: 150px;
+      margin: 2rem auto; } }
 
 .home .main-content {
   padding: 0;
@@ -7834,15 +7849,23 @@ input, label {
   float: left !important; }
 
 .chaperone {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin: auto; }
 
 #site-navigation.top-bar {
-  position: fixed;
   width: 100%;
   z-index: 3000;
   background: rgba(0, 0, 0, 0.8);
   font-size: 1.1rem; }
+  @media screen and (min-width: 64em) {
+    #site-navigation.top-bar {
+      position: fixed; } }
+  @media screen and (max-width: 63.9375em) {
+    #site-navigation.top-bar {
+      display: none; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #site-navigation.top-bar .top-bar-left {
+      display: none; } }
   #site-navigation.top-bar .top-bar-left * {
     background: transparent; }
   #site-navigation.top-bar .top-bar-left .dropdown {
@@ -7851,32 +7874,63 @@ input, label {
     background: transparent; }
   #site-navigation.top-bar .top-bar-right .dropdown {
     text-align: right; }
-  #site-navigation.top-bar ul.menu > li > a {
+  @media screen and (max-width: 39.9375em) {
+    #site-navigation.top-bar .top-bar-right li a {
+      padding: 5rem; } }
+  #site-navigation.top-bar ul.menu > li > a, #site-navigation.top-bar .menu > ul > li > a {
     height: auto;
     font: inherit;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
     padding: .8rem; }
-    #site-navigation.top-bar ul.menu > li > a:hover {
+    #site-navigation.top-bar ul.menu > li > a:hover, #site-navigation.top-bar .menu > ul > li > a:hover {
       background: rgba(0, 0, 0, 0.75);
       color: rgba(255, 255, 255, 0.8); }
-  #site-navigation.top-bar ul.menu > li.blue a {
+  #site-navigation.top-bar ul.menu > li.blue a, #site-navigation.top-bar .menu > ul > li.blue a {
     background: rgba(60, 93, 171, 0.55); }
-    #site-navigation.top-bar ul.menu > li.blue a:hover {
+    #site-navigation.top-bar ul.menu > li.blue a:hover, #site-navigation.top-bar .menu > ul > li.blue a:hover {
       background: rgba(60, 93, 171, 0.7); }
-  #site-navigation.top-bar ul.menu > li.red a {
+  #site-navigation.top-bar ul.menu > li.red a, #site-navigation.top-bar .menu > ul > li.red a {
     background: rgba(174, 71, 66, 0.55); }
-    #site-navigation.top-bar ul.menu > li.red a:hover {
+    #site-navigation.top-bar ul.menu > li.red a:hover, #site-navigation.top-bar .menu > ul > li.red a:hover {
       background: rgba(174, 71, 66, 0.7); }
-  #site-navigation.top-bar ul.menu > li.red, #site-navigation.top-bar ul.menu > li.blue {
+  #site-navigation.top-bar ul.menu > li.red, #site-navigation.top-bar ul.menu > li.blue, #site-navigation.top-bar .menu > ul > li.red, #site-navigation.top-bar .menu > ul > li.blue {
     border-right-color: rgba(255, 255, 255, 0.5); }
-  #site-navigation.top-bar ul.menu > li ul.dropdown {
+  #site-navigation.top-bar ul.menu > li ul.dropdown, #site-navigation.top-bar .menu > ul > li ul.dropdown {
     background: rgba(0, 0, 0, 0.5) !important;
     min-width: 100%; }
-    #site-navigation.top-bar ul.menu > li ul.dropdown li {
+    #site-navigation.top-bar ul.menu > li ul.dropdown li, #site-navigation.top-bar .menu > ul > li ul.dropdown li {
       width: 100%; }
-      #site-navigation.top-bar ul.menu > li ul.dropdown li a {
+      #site-navigation.top-bar ul.menu > li ul.dropdown li a, #site-navigation.top-bar .menu > ul > li ul.dropdown li a {
         padding: .8rem 2rem; }
+  #site-navigation.top-bar .vertical.menu ul {
+    margin: 0; }
+    #site-navigation.top-bar .vertical.menu ul li {
+      border: 0px;
+      display: block; }
+      #site-navigation.top-bar .vertical.menu ul li a {
+        display: block;
+        padding: .5rem; }
+      #site-navigation.top-bar .vertical.menu ul li.blue a {
+        background: rgba(60, 93, 171, 0.55); }
+        #site-navigation.top-bar .vertical.menu ul li.blue a:hover {
+          background: rgba(60, 93, 171, 0.7); }
+      #site-navigation.top-bar .vertical.menu ul li.red a {
+        background: rgba(174, 71, 66, 0.55); }
+        #site-navigation.top-bar .vertical.menu ul li.red a:hover {
+          background: rgba(174, 71, 66, 0.7); }
+      #site-navigation.top-bar .vertical.menu ul li.red, #site-navigation.top-bar .vertical.menu ul li.blue {
+        border-right-color: rgba(255, 255, 255, 0.5); }
+    #site-navigation.top-bar .vertical.menu ul.blue a {
+      background: rgba(60, 93, 171, 0.55); }
+      #site-navigation.top-bar .vertical.menu ul.blue a:hover {
+        background: rgba(60, 93, 171, 0.7); }
+    #site-navigation.top-bar .vertical.menu ul.red a {
+      background: rgba(174, 71, 66, 0.55); }
+      #site-navigation.top-bar .vertical.menu ul.red a:hover {
+        background: rgba(174, 71, 66, 0.7); }
+    #site-navigation.top-bar .vertical.menu ul.red, #site-navigation.top-bar .vertical.menu ul.blue {
+      border-right-color: rgba(255, 255, 255, 0.5); }
 
 .frm_form_field {
   font-size: .9em; }
@@ -7891,6 +7945,9 @@ input, label {
   font-size: 1.1rem; }
   #subfooter * {
     font-size: 1.1rem; }
+  @media screen and (max-width: 63.9375em) {
+    #subfooter {
+      padding: 1.5rem; } }
   #subfooter #mc_embed_signup {
     background: transparent; }
     #subfooter #mc_embed_signup input {
@@ -7907,7 +7964,11 @@ input, label {
       margin: 0; }
     #subfooter #mc_embed_signup input[type=submit] {
       background: #3c5dab;
-      margin-left: -5px; }
+      margin-top: 1rem; }
+      @media screen and (min-width: 40em) {
+        #subfooter #mc_embed_signup input[type=submit] {
+          margin-left: -5px;
+          margin-top: 0; } }
       #subfooter #mc_embed_signup input[type=submit]:hover {
         background: #5a80da; }
 

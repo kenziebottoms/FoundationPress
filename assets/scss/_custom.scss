@@ -79,6 +79,11 @@ input, label {
                 height: 200px;
                 width: 200px;
                 margin: 7rem auto 3rem auto;
+                @include breakpoint(small only) {
+                    width: 130px;
+                    height: 130px;
+                    margin: 1rem auto;
+                }
             }
         }
         #contact-bar {
@@ -124,6 +129,11 @@ input, label {
 }
 #page-full-width {
     margin: 5rem auto;
+    @include breakpoint(medium down) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 3rem auto;
+    }
     .main-content {
         padding: 0;
     }
@@ -187,6 +197,11 @@ input, label {
                 img {
                     height: 250px;
                     width: 250px;
+                    @include breakpoint(small only) {
+                        height: 150px;
+                        width: 150px;
+                        margin: 2rem auto;
+                    }
                 }
             }
         }
@@ -236,13 +251,23 @@ input, label {
     max-width: $global-width;
     margin: auto;
 }
+.title-bar {
+}
 #site-navigation.top-bar {
-    position: fixed;
     width: 100%;
     z-index: 3000;
     background: rgba(#000,.8);
-    font-size: 1.1rem;
+    font-size: 1.1rem;        
+    @include breakpoint(large up) {
+        position: fixed;
+    }
+    @include breakpoint(medium down) {
+        display: none;
+    }
     .top-bar-left {
+        @include breakpoint(medium only) {
+            display: none;
+        }
         * {
             background: transparent;
         }
@@ -257,8 +282,15 @@ input, label {
         .dropdown {
             text-align: right;
         }
+        @include breakpoint(small only) {
+            li {
+                a {
+                    padding: 5rem;
+                }
+            }
+        }
     }
-    ul.menu {
+    ul.menu, .menu > ul {
         > li {
             > a {
                 height: auto;
@@ -299,6 +331,47 @@ input, label {
             }
         }
     }
+    .vertical.menu ul {
+        margin: 0;
+        li {
+            border: 0px;
+            display: block;
+            a {
+                display: block;
+                padding: .5rem;
+            }
+            &.blue a {
+                background: rgba($blue,.55);
+                &:hover {
+                    background: rgba($blue, .7);
+                }
+            }
+            &.red a {
+                background: rgba($red,.55);
+                &:hover {
+                    background: rgba($red, .7);
+                }
+            }
+            &.red, &.blue {
+                border-right-color: rgba(#fff,.5);
+            }
+        }
+            &.blue a {
+                background: rgba($blue,.55);
+                &:hover {
+                    background: rgba($blue, .7);
+                }
+            }
+            &.red a {
+                background: rgba($red,.55);
+                &:hover {
+                    background: rgba($red, .7);
+                }
+            }
+            &.red, &.blue {
+                border-right-color: rgba(#fff,.5);
+            }
+    }
 }
 .frm_form_field {
     font-size: .9em;
@@ -316,6 +389,9 @@ input, label {
     * {
         font-size: 1.1rem;
     }
+    @include breakpoint(medium down) {
+        padding: 1.5rem;
+    }
     #mc_embed_signup {
         background: transparent;
         input {
@@ -332,7 +408,11 @@ input, label {
         }
         input[type=submit] {
             background: $blue;
-            margin-left: -5px;
+            margin-top: 1rem;
+            @include breakpoint(medium up) {
+                margin-left: -5px;
+                margin-top: 0;
+            }
             &:hover {
                 background: $blue-hl;
             }
