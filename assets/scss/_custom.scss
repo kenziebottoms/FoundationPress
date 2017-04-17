@@ -226,6 +226,12 @@ input, label {
                 width: 120px;
                 margin-right: 1rem;
             }
+            @include breakpoint(medium up) {
+                min-height: 130px;
+                &:nth-child(2n+1) {
+                    clear: left !important;
+                }
+            }
         }
         .columns:last-child:not(:first-child) {
             float: left !important;
@@ -289,6 +295,14 @@ input, label {
                 }
             }
         }
+        @include breakpoint(medium only) {
+            float: none;
+            text-align: center;
+            #menu-main {
+                text-align: center;
+                margin: auto;
+            }
+        }
     }
     ul.menu, .menu > ul {
         > li {
@@ -317,7 +331,7 @@ input, label {
                 }
             }
             &.red, &.blue {
-                border-right-color: rgba(#fff,.5);
+                border-left-color: rgba(#fff,.5);
             }
             ul.dropdown {
                 background: rgba(#000,.5) !important;
@@ -353,24 +367,9 @@ input, label {
                 }
             }
             &.red, &.blue {
-                border-right-color: rgba(#fff,.5);
+                border: none;
             }
         }
-            &.blue a {
-                background: rgba($blue,.55);
-                &:hover {
-                    background: rgba($blue, .7);
-                }
-            }
-            &.red a {
-                background: rgba($red,.55);
-                &:hover {
-                    background: rgba($red, .7);
-                }
-            }
-            &.red, &.blue {
-                border-right-color: rgba(#fff,.5);
-            }
     }
 }
 .frm_form_field {

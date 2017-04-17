@@ -40,6 +40,7 @@
 				<?php wp_nav_menu(array('theme_location' => 'top_left')); ?>
 			</div>
 			<div class="top-bar-right">
+				<?php foundationpress_top_bar_r(); ?>
 				<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
 			</div>
 		</nav>

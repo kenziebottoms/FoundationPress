@@ -6964,8 +6964,8 @@ a.thumbnail {
 .top-bar .menu > li:not(.menu-text) > a {
   padding: 1rem; }
 
-.top-bar .menu li:not(:last-child) {
-  border-right: 1px solid #4e4e4e; }
+.top-bar .menu li:not(:first-child) {
+  border-left: 1px solid #4e4e4e; }
 
 .top-bar .dropdown.menu .submenu {
   border: 0; }
@@ -7833,6 +7833,11 @@ input, label {
     height: 120px;
     width: 120px;
     margin-right: 1rem; }
+  @media screen and (min-width: 40em) {
+    .archive .members .member {
+      min-height: 130px; }
+      .archive .members .member:nth-child(2n+1) {
+        clear: left !important; } }
 
 .archive .members .columns:last-child:not(:first-child) {
   float: left !important; }
@@ -7877,6 +7882,13 @@ input, label {
   @media screen and (max-width: 39.9375em) {
     #site-navigation.top-bar .top-bar-right li a {
       padding: 5rem; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #site-navigation.top-bar .top-bar-right {
+      float: none;
+      text-align: center; }
+      #site-navigation.top-bar .top-bar-right #menu-main {
+        text-align: center;
+        margin: auto; } }
   #site-navigation.top-bar ul.menu > li > a, #site-navigation.top-bar .menu > ul > li > a {
     height: auto;
     font: inherit;
@@ -7895,7 +7907,7 @@ input, label {
     #site-navigation.top-bar ul.menu > li.red a:hover, #site-navigation.top-bar .menu > ul > li.red a:hover {
       background: rgba(174, 71, 66, 0.7); }
   #site-navigation.top-bar ul.menu > li.red, #site-navigation.top-bar ul.menu > li.blue, #site-navigation.top-bar .menu > ul > li.red, #site-navigation.top-bar .menu > ul > li.blue {
-    border-right-color: rgba(255, 255, 255, 0.5); }
+    border-left-color: rgba(255, 255, 255, 0.5); }
   #site-navigation.top-bar ul.menu > li ul.dropdown, #site-navigation.top-bar .menu > ul > li ul.dropdown {
     background: rgba(0, 0, 0, 0.5) !important;
     min-width: 100%; }
@@ -7920,17 +7932,7 @@ input, label {
         #site-navigation.top-bar .vertical.menu ul li.red a:hover {
           background: rgba(174, 71, 66, 0.7); }
       #site-navigation.top-bar .vertical.menu ul li.red, #site-navigation.top-bar .vertical.menu ul li.blue {
-        border-right-color: rgba(255, 255, 255, 0.5); }
-    #site-navigation.top-bar .vertical.menu ul.blue a {
-      background: rgba(60, 93, 171, 0.55); }
-      #site-navigation.top-bar .vertical.menu ul.blue a:hover {
-        background: rgba(60, 93, 171, 0.7); }
-    #site-navigation.top-bar .vertical.menu ul.red a {
-      background: rgba(174, 71, 66, 0.55); }
-      #site-navigation.top-bar .vertical.menu ul.red a:hover {
-        background: rgba(174, 71, 66, 0.7); }
-    #site-navigation.top-bar .vertical.menu ul.red, #site-navigation.top-bar .vertical.menu ul.blue {
-      border-right-color: rgba(255, 255, 255, 0.5); }
+        border: none; }
 
 .frm_form_field {
   font-size: .9em; }
