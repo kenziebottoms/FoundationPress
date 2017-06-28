@@ -39,7 +39,15 @@ get_template_part( 'template-parts/featured-image' ); ?>
                 <?php if (get_field('level') == 'Council Member') { ?>
                     <strong><?php the_field('position_title'); ?></strong>
                 <?php } else { ?>
-                    <strong><?php the_field('level'); ?></strong>                
+                    <strong>
+                        <?php $exp = get_field('level');
+                        if ($exp == '0') { echo ""; }
+                        else if ($exp == '1') { echo "Master"; }
+                        else if ($exp == '2') { echo "Knight"; }
+                        else if ($exp == '3') { echo "Padawan"; }
+                        else if ($exp == '4') { echo "Youngling"; }
+                        else { echo $exp; } ?>
+                    </strong>
                 <?php } ?>
                 <p>
                     <?php the_field('areas_of_expertise'); ?>
