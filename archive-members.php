@@ -27,33 +27,38 @@ get_template_part( 'template-parts/featured-image' ); ?>
         }?>
     </div>
     <article class="main-content members archive">
-    <?php if ( have_posts() ) : ?>
+        <?php $posts = get_posts(array(
+            'post_type'         => 'members',
+            'posts_per_page'    => -1,
+            'meta_key'          => 'level',
+            'orderby'           => array(
+                'meta_value' => 'ASC',
+                'title' => 'ASC',
+            ),
+        )); ?>
+    <?php if ( $posts ) : ?>
 
         <?php /* Start the Loop */ ?>
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php foreach ( $posts as $post ) : ?>
             <div class="large-6 medium-6 small-12 columns member">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('square'); ?>
                 </a>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <?php if (get_field('level') == 'Council Member') { ?>
-                    <strong><?php the_field('position_title'); ?></strong>
-                <?php } else { ?>
-                    <strong>
-                        <?php $exp = get_field('level');
-                        if ($exp == '0') { echo ""; }
-                        else if ($exp == '1') { echo "Master"; }
-                        else if ($exp == '2') { echo "Knight"; }
-                        else if ($exp == '3') { echo "Padawan"; }
-                        else if ($exp == '4') { echo "Youngling"; }
-                        else { echo $exp; } ?>
-                    </strong>
-                <?php } ?>
+                <strong>
+                    <?php $exp = get_field('level');
+                    if ($exp == '0') { echo get_field('position_title'); }
+                    else if ($exp == '1') { echo "Master"; }
+                    else if ($exp == '2') { echo "Knight"; }
+                    else if ($exp == '3') { echo "Padawan"; }
+                    else if ($exp == '4') { echo "Youngling"; }
+                    else { echo $exp; } ?>
+                </strong>
                 <p>
                     <?php the_field('areas_of_expertise'); ?>
                 </p>
             </div>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
 
         <?php else : ?>
             <?php get_template_part( 'template-parts/content', 'none' ); ?>
