@@ -36,6 +36,9 @@ get_header(); ?>
                 if ($term->name == "Shop Captains") {
                     echo "<strong>Shop Captain</strong> of " . get_field('shop') . "<br/>";
                 }
+                if ($term->name == "Lieutenant") {
+                    echo "<strong>Shop Lieutenant</strong> of " . get_field('shop') . "<br/>";
+                }
                 if ($term->name == "Teachers") {
                     echo "<strong>Teacher</strong> of " . get_field('subjects') . "<br/>";
                 }

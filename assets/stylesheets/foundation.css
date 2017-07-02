@@ -8160,4 +8160,10 @@ h1.header, h2.header, h3.header, h4.header, h5.header, h6.header {
       .overlay-box.mobile-left {
         float: left; } }
 
+article.links date {
+  margin: .5rem 0;
+  font-size: 1.3rem;
+  color: #999;
+  display: block; }
+
 /*# sourceMappingURL=foundation.css.map */

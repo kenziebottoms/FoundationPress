@@ -17,12 +17,24 @@ get_header();
 get_template_part( 'template-parts/featured-image' ); ?>
 
 <div id="page-full-width" role="main">
-    <article class="main-content">
+    <article class="main-content links">
     <?php if ( have_posts() ) : ?>
 
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+            <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
+                <header>
+                    <h2><a href="<?php the_field('link'); ?>" target="blank"><?php the_title(); ?> <i class="material-icons md-36">open_in_new</i></a></h2>
+                    <date><?php the_date(); ?></date>
+                </header>
+                <div class="entry-content">
+                    <?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
+                </div>
+                <footer>
+                    <?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
+                </footer>
+                <hr />
+            </div>
         <?php endwhile; ?>
 
         <?php else : ?>

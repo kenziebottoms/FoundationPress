@@ -36,7 +36,14 @@ get_template_part( 'template-parts/featured-image' ); ?>
                     <?php the_post_thumbnail('square'); ?>
                 </a>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <strong>Shop Captain</strong>
+                <strong>
+                    <?php $terms = wp_get_post_terms(get_the_ID(), "office", array("fields" => "all"));
+                    if ($terms[0]->session_name() == 'Lieutenant') {
+                        echo "Shop Lieutenant";
+                    } else {
+                        echo "Shop Captain";
+                    } ?>
+                </strong>
                 <p>
                     <?php the_field('shop'); ?>
                 </p>
