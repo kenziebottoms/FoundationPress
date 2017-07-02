@@ -36,7 +36,7 @@ get_header(); ?>
                 if ($term->name == "Shop Captains") {
                     echo "<strong>Shop Captain</strong> of " . get_field('shop') . "<br/>";
                 }
-                if ($term->name == "Lieutenant") {
+                if ($term->name == "Lieutenants") {
                     echo "<strong>Shop Lieutenant</strong> of " . get_field('shop') . "<br/>";
                 }
                 if ($term->name == "Teachers") {
