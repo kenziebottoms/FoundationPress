@@ -307,6 +307,14 @@ input, label {
                 margin: auto;
             }
         }
+        ul.sub-menu {
+            a {
+                font: inherit;
+                @include breakpoint(small only) {
+                    padding-left: 2rem !important;
+                }
+            }
+        }
     }
     ul.menu, .menu > ul {
         > li {
