@@ -28,7 +28,13 @@ get_template_part( 'template-parts/featured-image' ); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
                 <header>
                     <h3><a href="<?php the_field('link'); ?>" target="blank"><?php the_title(); ?> <i class="material-icons md-36">open_in_new</i></a></h3>
-                    <date><?php the_date(); ?></date>
+                    <date>
+                        <?php if (get_field('site_name') != '') {
+                            the_field('site_name');
+                            echo "&nbsp;&nbsp;|&nbsp;";
+                        } ?>
+                        <?php the_date(); ?>
+                    </date>
                 </header>
                 <div class="entry-content">
                     <?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
