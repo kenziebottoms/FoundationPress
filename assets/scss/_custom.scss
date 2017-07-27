@@ -4,6 +4,9 @@ $red: #ae4742;
 $red-hl: saturate(lighten($red,15%), 15%);
 $blue: #3c5dab;
 $blue-hl: saturate(lighten($blue,15%), 15%);
+$light-blue: saturate(lighten($blue-hl,20%),10%);
+$light-blue-hl: saturate(lighten($light-blue,10%),10%);
+$lightest-blue: saturate(lighten($light-blue,15%), 15%);
 
 body {
     font-family: $font-stack;
@@ -39,12 +42,48 @@ a {
         }
     }
 }
+.entry-content table {
+    background: $lightest-blue;
+    font-size: 1.2rem;
+    border: none;
+    border-spacing: 0;
+    tbody {
+        background: transparent;
+        border: none;
+        tr {
+            border: none;
+            &:nth-child(even) {
+                background: transparent;
+            }
+            &:nth-child(odd) {
+                background: $light-blue-hl;
+            }
+            th {
+                background: $blue;
+                color: #fff;
+                font-weight: inherit;
+                font-size: 1.3rem;
+            }
+            td {
+                backround: transparent;
+            }
+            td, th {
+                border-collapse: collapse;
+                border: none;
+            }
+        }
+    }
+}
 .big {
     font-size: 1.3em;
     font-weight: 100;
     a {
         font-weight: 100;
     }
+}
+.chaperone {
+    max-width: $global-width;
+    margin: auto;
 }
 @include breakpoint(large up) {
     .row {
@@ -251,17 +290,21 @@ input, label {
                 margin: .15rem auto;
                 font-size: 1.3rem;
             }
+            @include breakpoint(large up) {
+                &:nth-child(4n+1) {
+                    clear: left;
+                }                
+            }
+            @include breakpoint(medium only) {
+                &:nth-child(3n+1) {
+                    clear: left;
+                }                
+            }
         }
         .columns:last-child:not(:first-child) {
             float: left !important;
         }
     }
-}
-.chaperone {
-    max-width: $global-width;
-    margin: auto;
-}
-.title-bar {
 }
 #site-navigation.top-bar {
     width: 100%;
@@ -507,6 +550,106 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.breadcrumbs {
+    a {
+        color: $blue !important;
+        &:hover {
+            color: $blue-hl !important;
+            text-decoration: none !important;
+        }
+    }
+}
+.gallery {
+    &.gallery-columns-4 {
+        .gallery-item {
+            width: 24%;
+            padding: 0 1% 1% 0;
+            float: left;
+        }
+    }
+    &.gallery-columns-5 {
+        .gallery-item {
+            width: 19%;
+            padding: 0 1% 1% 0;
+            float: left;
+        }
+    }
+}
+.overlay-box {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    transition: .2s;
+    &.right {
+        float: right;
+    }
+    a {
+        flex: 0 1 auto;
+        font-size: 2.5rem;
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        margin: 0;
+    }
+    &:hover {
+        opacity: .8;
+    }
+    @include breakpoint(large up) {
+        width: 49%;
+        height: 20rem;
+        margin-bottom: 1rem;
+        &.eight {
+            height: 12rem;
+        }
+    }
+    @include breakpoint(medium only) {
+        width: 49%;
+        height: 15rem;
+        margin-bottom: 1rem;
+        a {
+            font-size: 2.25rem;
+        }
+        &.eight {
+            height: 10rem;
+        }
+    }
+    @include breakpoint(small down) {
+        width: 100%;
+        height: 10rem;
+        a {
+            font-size: 1.5rem;
+        }
+        &.mobile-right {
+            float: right;
+        }
+        &.mobile-left {
+            float: left;
+        }
+        &.eight {
+            height: 8rem;
+        }
+    }
+    &.eight {
+        &:hover {
+            opacity: 1;
+        }
+        a {
+            cursor: default;
+        }
+    }
+}
+article.links {
+    date {
+        margin: .5rem 0;
+        font-size: 1.3rem;
+        color: #999;
+        display: block;
+    }
+}
+
 // event calendar
 
 .tribe-events-button {
@@ -561,7 +704,7 @@ h1, h2, h3, h4, h5, h6 {
                 }
                 &.tribe-events-has-events {
                     [id*='tribe-events-daynum-'] {
-                        background: saturate(lighten($blue-hl,20%),10%) !important;
+                        background: $light-blue !important;
                         color: #fff !important;
                         a {
                             background: transparent;
@@ -584,87 +727,5 @@ h1, h2, h3, h4, h5, h6 {
                 }
             }
         }
-    }
-}
-.breadcrumbs {
-    a {
-        color: $blue !important;
-        &:hover {
-            color: $blue-hl !important;
-            text-decoration: none !important;
-        }
-    }
-}
-.gallery {
-    &.gallery-columns-4 {
-        .gallery-item {
-            width: 24%;
-            padding: 0 1% 1% 0;
-            float: left;
-        }
-    }
-    &.gallery-columns-5 {
-        .gallery-item {
-            width: 19%;
-            padding: 0 1% 1% 0;
-            float: left;
-        }
-    }
-}
-.overlay-box {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
-    transition: .2s;
-    &.right {
-        float: right;
-    }
-    a {
-        flex: 0 1 auto;
-        font-size: 2.5rem;
-        color: #fff;
-        font-weight: 300;
-        text-align: center;
-        margin: 0;
-    }
-    &:hover {
-        opacity: .8;
-    }
-    @include breakpoint(large up) {
-        width: 49%;
-        height: 20rem;
-        margin-bottom: 1rem;
-    }
-    @include breakpoint(medium only) {
-        width: 49%;
-        height: 15rem;
-        margin-bottom: 1rem;
-        a {
-            font-size: 2.25rem;
-        }
-    }
-    @include breakpoint(small down) {
-        width: 100%;
-        height: 10rem;
-        a {
-            font-size: 1.5rem;
-        }
-        &.mobile-right {
-            float: right;
-        }
-        &.mobile-left {
-            float: left;
-        }
-    }
-}
-article.links {
-    date {
-        margin: .5rem 0;
-        font-size: 1.3rem;
-        color: #999;
-        display: block;
     }
 }

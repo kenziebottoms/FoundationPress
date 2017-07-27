@@ -7686,11 +7686,40 @@ a {
       a.button.red:hover {
         background: #d86a64; }
 
+.entry-content table {
+  background: #e8effe;
+  font-size: 1.2rem;
+  border: none;
+  border-spacing: 0; }
+  .entry-content table tbody {
+    background: transparent;
+    border: none; }
+    .entry-content table tbody tr {
+      border: none; }
+      .entry-content table tbody tr:nth-child(even) {
+        background: transparent; }
+      .entry-content table tbody tr:nth-child(odd) {
+        background: #d2defb; }
+      .entry-content table tbody tr th {
+        background: #3c5dab;
+        color: #fff;
+        font-weight: inherit;
+        font-size: 1.3rem; }
+      .entry-content table tbody tr td {
+        backround: transparent; }
+      .entry-content table tbody tr td, .entry-content table tbody tr th {
+        border-collapse: collapse;
+        border: none; }
+
 .big {
   font-size: 1.3em;
   font-weight: 100; }
   .big a {
     font-weight: 100; }
+
+.chaperone {
+  max-width: 62.5rem;
+  margin: auto; }
 
 @media screen and (min-width: 64em) {
   .row .columns:first-child {
@@ -7852,13 +7881,15 @@ input, label {
   .archive .projects .project p.maker {
     margin: .15rem auto;
     font-size: 1.3rem; }
+  @media screen and (min-width: 64em) {
+    .archive .projects .project:nth-child(4n+1) {
+      clear: left; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .archive .projects .project:nth-child(3n+1) {
+      clear: left; } }
 
 .archive .projects .columns:last-child:not(:first-child) {
   float: left !important; }
-
-.chaperone {
-  max-width: 62.5rem;
-  margin: auto; }
 
 #site-navigation.top-bar {
   width: 100%;
@@ -8041,6 +8072,90 @@ h1.header, h2.header, h3.header, h4.header, h5.header, h6.header {
   h1.header.red, h2.header.red, h3.header.red, h4.header.red, h5.header.red, h6.header.red {
     background: #ae4742; }
 
+.breadcrumbs a {
+  color: #3c5dab !important; }
+  .breadcrumbs a:hover {
+    color: #5a80da !important;
+    text-decoration: none !important; }
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 24%;
+  padding: 0 1% 1% 0;
+  float: left; }
+
+.gallery.gallery-columns-5 .gallery-item {
+  width: 19%;
+  padding: 0 1% 1% 0;
+  float: left; }
+
+.overlay-box {
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: left;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .overlay-box.right {
+    float: right; }
+  .overlay-box a {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    margin: 0; }
+  .overlay-box:hover {
+    opacity: .8; }
+  @media screen and (min-width: 64em) {
+    .overlay-box {
+      width: 49%;
+      height: 20rem;
+      margin-bottom: 1rem; }
+      .overlay-box.eight {
+        height: 12rem; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .overlay-box {
+      width: 49%;
+      height: 15rem;
+      margin-bottom: 1rem; }
+      .overlay-box a {
+        font-size: 2.25rem; }
+      .overlay-box.eight {
+        height: 10rem; } }
+  @media screen and (max-width: 39.9375em) {
+    .overlay-box {
+      width: 100%;
+      height: 10rem; }
+      .overlay-box a {
+        font-size: 1.5rem; }
+      .overlay-box.mobile-right {
+        float: right; }
+      .overlay-box.mobile-left {
+        float: left; }
+      .overlay-box.eight {
+        height: 8rem; } }
+  .overlay-box.eight:hover {
+    opacity: 1; }
+  .overlay-box.eight a {
+    cursor: default; }
+
+article.links date {
+  margin: .5rem 0;
+  font-size: 1.3rem;
+  color: #999;
+  display: block; }
+
 .tribe-events-button {
   background: #3c5dab !important;
   -webkit-transition: .2s;
@@ -8096,79 +8211,5 @@ h1.header, h2.header, h3.header, h4.header, h5.header, h6.header {
         color: #3c5dab !important; }
       .tribe-events-calendar tbody tr td .tribe-events-tooltip .tribe-events-event-body {
         font-size: 13px !important; }
-
-.breadcrumbs a {
-  color: #3c5dab !important; }
-  .breadcrumbs a:hover {
-    color: #5a80da !important;
-    text-decoration: none !important; }
-
-.gallery.gallery-columns-4 .gallery-item {
-  width: 24%;
-  padding: 0 1% 1% 0;
-  float: left; }
-
-.gallery.gallery-columns-5 .gallery-item {
-  width: 19%;
-  padding: 0 1% 1% 0;
-  float: left; }
-
-.overlay-box {
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  float: left;
-  -webkit-transition: .2s;
-  transition: .2s; }
-  .overlay-box.right {
-    float: right; }
-  .overlay-box a {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    font-size: 2.5rem;
-    color: #fff;
-    font-weight: 300;
-    text-align: center;
-    margin: 0; }
-  .overlay-box:hover {
-    opacity: .8; }
-  @media screen and (min-width: 64em) {
-    .overlay-box {
-      width: 49%;
-      height: 20rem;
-      margin-bottom: 1rem; } }
-  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .overlay-box {
-      width: 49%;
-      height: 15rem;
-      margin-bottom: 1rem; }
-      .overlay-box a {
-        font-size: 2.25rem; } }
-  @media screen and (max-width: 39.9375em) {
-    .overlay-box {
-      width: 100%;
-      height: 10rem; }
-      .overlay-box a {
-        font-size: 1.5rem; }
-      .overlay-box.mobile-right {
-        float: right; }
-      .overlay-box.mobile-left {
-        float: left; } }
-
-article.links date {
-  margin: .5rem 0;
-  font-size: 1.3rem;
-  color: #999;
-  display: block; }
 
 /*# sourceMappingURL=foundation.css.map */
