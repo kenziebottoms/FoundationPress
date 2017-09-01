@@ -7789,27 +7789,42 @@ input, label {
 .main-content {
   padding: 2.5rem 0; }
 
-#page-full-width {
+#page-full-width, #page-sidebar-right {
   margin: 5rem auto; }
   @media screen and (max-width: 63.9375em) {
-    #page-full-width {
+    #page-full-width, #page-sidebar-right {
       padding-left: 1rem;
       padding-right: 1rem;
       margin: 3rem auto; } }
-  #page-full-width .main-content {
+  #page-full-width .main-content, #page-sidebar-right .main-content {
     padding: 0; }
-  #page-full-width.member img.wp-post-image {
+  #page-full-width.member img.wp-post-image, #page-sidebar-right.member img.wp-post-image {
     width: 80%;
     margin: 0 auto 1rem auto;
     display: block; }
-  #page-full-width.member .right {
+  #page-full-width.member .right, #page-sidebar-right.member .right {
     float: right;
     font-size: 1.2rem;
     text-align: center; }
-  #page-full-width.project img.wp-post-image {
+  #page-full-width.project img.wp-post-image, #page-sidebar-right.project img.wp-post-image {
     margin: 2rem auto;
     float: none;
     display: block; }
+
+#page-sidebar-right #sidebar {
+  padding-left: 3rem; }
+  #page-sidebar-right #sidebar.sponsorship {
+    text-align: center;
+    font-size: 1.5rem; }
+    #page-sidebar-right #sidebar.sponsorship img {
+      max-height: 150px;
+      max-width: 100%;
+      display: block;
+      margin: 2rem auto .5rem auto; }
+
+.sponsor {
+  display: inline-block;
+  padding: 1rem 3rem; }
 
 #map {
   height: 600px; }
@@ -7983,7 +7998,8 @@ input, label {
 #subfooter {
   background: #ddd;
   padding: 1.25rem 0;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  clear: both; }
   #subfooter * {
     font-size: 1.1rem; }
   @media screen and (max-width: 63.9375em) {

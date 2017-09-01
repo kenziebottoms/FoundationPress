@@ -166,7 +166,7 @@ input, label {
 .main-content {
     padding: 2.5rem 0;
 }
-#page-full-width {
+#page-full-width, #page-sidebar-right {
     margin: 5rem auto;
     @include breakpoint(medium down) {
         padding-left: 1rem;
@@ -195,6 +195,25 @@ input, label {
             display: block;
         }
     }
+}
+#page-sidebar-right {
+    #sidebar {
+        padding-left: 3rem;
+        &.sponsorship {
+            text-align: center;
+            font-size: 1.5rem;
+            img {
+                max-height: 150px;
+                max-width: 100%;
+                display: block;
+                margin: 2rem auto .5rem auto;
+            }
+        }    
+    }
+}
+.sponsor {
+    display: inline-block;
+    padding: 1rem 3rem;
 }
 #map {
     height: 600px;
@@ -440,6 +459,7 @@ input, label {
     background: #ddd;
     padding: 1.25rem 0;
     font-size: 1.1rem;
+    clear: both;
     * {
         font-size: 1.1rem;
     }
