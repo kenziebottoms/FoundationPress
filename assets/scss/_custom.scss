@@ -103,6 +103,7 @@ input, label {
 #featured-hero {
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     height: auto;
     text-align: center;
     .overlay {
@@ -115,9 +116,12 @@ input, label {
         background-color: rgba(#000, .3);
         a.custom-logo-link {
             img {
-                height: 200px;
-                width: 200px;
-                margin: 7rem auto 3rem auto;
+                height: 180px;
+                width: 180px;
+                margin: 5rem auto 2rem auto;
+                @include breakpoint(medium only) {
+                    margin-top: 3rem;
+                }
                 @include breakpoint(small only) {
                     width: 130px;
                     height: 130px;
@@ -199,18 +203,19 @@ input, label {
 #page-sidebar-right {
     #sidebar {
         padding-left: 3rem;
-        &.sponsorship {
-            text-align: center;
-            font-size: 1.5rem;
-            img {
-                max-height: 150px;
-                max-width: 100%;
-                display: block;
-                margin: 2rem auto .5rem auto;
-            }
-        }    
     }
 }
+#sponsorship {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 3rem 3rem 3rem;
+    img {
+        max-height: 150px;
+        max-width: 100%;
+        display: block;
+        margin: 2rem auto .5rem auto;
+    }
+}    
 .sponsor {
     display: inline-block;
     padding: 1rem 3rem;
@@ -259,6 +264,10 @@ input, label {
                 img {
                     height: 250px;
                     width: 250px;
+                    margin: 6rem auto 3rem auto;
+                    @include breakpoint(medium only) {
+                        margin-top: 3rem;
+                    }
                     @include breakpoint(small only) {
                         height: 150px;
                         width: 150px;
@@ -386,6 +395,7 @@ input, label {
                 font-weight: 400;
                 color: rgba(#fff, .6);
                 padding: .8rem;
+                white-space: nowrap;
                 &:hover {
                     background: rgba(#000,.75);
                     color: rgba(#fff, .8);

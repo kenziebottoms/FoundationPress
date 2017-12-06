@@ -24,21 +24,21 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 <hr/>
-  <div class="row sponsorship" id="sidebar">
-    <h3>Our Sponsors</h3>
-    <?php $query = new WP_Query(array('post_type' => 'sponsor')); ?>
-    <?php while ($query->have_posts()) : $query->the_post(); ?>
-      <div class="sponsor">
-        <a href="<?php the_field('website'); ?>" target="_blank">
-          <?php the_post_thumbnail(); ?>
-        </a>
-        <a href="<?php the_field('website'); ?>" target="_blank">
-          <?php the_title(); ?>
-        </a>
-      </div>
-    <?php endwhile; ?>
-  </div>
-  <div class="clearfix"></div>
 </div>
+<div id="sponsorship">
+  <h3>Our Sponsors</h3>
+  <?php $query = new WP_Query(array('post_type' => 'sponsor')); ?>
+  <?php while ($query->have_posts()) : $query->the_post(); ?>
+    <div class="sponsor">
+      <a href="<?php the_field('website'); ?>" target="_blank">
+        <?php the_post_thumbnail(); ?>
+      </a>
+      <a href="<?php the_field('website'); ?>" target="_blank">
+        <?php the_title(); ?>
+      </a>
+    </div>
+  <?php endwhile; ?>
+</div>
+<div class="clearfix"></div>
 
 <?php get_footer();
