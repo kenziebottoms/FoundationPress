@@ -8233,4 +8233,11 @@ article.links date {
       .tribe-events-calendar tbody tr td .tribe-events-tooltip .tribe-events-event-body {
         font-size: 13px !important; }
 
+.not-found .entry-content {
+  font-size: 1.3rem;
+  width: 80%;
+  margin: auto; }
+  .not-found .entry-content .callout {
+    margin-bottom: 2rem; }
+
 /*# sourceMappingURL=foundation.css.map */

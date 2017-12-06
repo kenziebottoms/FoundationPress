@@ -1,34 +1,36 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
- */
-
+/*
+Template Name: Full Width
+*/
 get_header(); ?>
 
-<div class="row">
-	<div class="small-12 large-8 columns" role="main">
+<?php get_template_part( 'template-parts/featured-image' ); ?>
 
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php _e( 'File Not Found', 'foundationpress' ); ?></h1>
-			</header>
-			<div class="entry-content">
-				<div class="error">
-					<p class="bottom"><?php _e( 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'foundationpress' ); ?></p>
-				</div>
-				<p><?php _e( 'Please try the following:', 'foundationpress' ); ?></p>
-				<ul>
-					<li><?php _e( 'Check your spelling', 'foundationpress' ); ?></li>
-					<li><?php printf( __( 'Return to the <a href="%s">home page</a>', 'foundationpress' ), home_url() ); ?></li>
-					<li><?php _e( 'Click the <a href="javascript:history.back()">Back</a> button', 'foundationpress' ); ?></li>
-				</ul>
-			</div>
-		</article>
+<div id="page-full-width" class="not-found" role="main">
 
-	</div>
-	<?php get_sidebar(); ?>
+<?php do_action( 'foundationpress_before_content' ); ?>
+  <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+      <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+      <div class="entry-content">
+		  <div class="callout alert">
+			  <strong>Uh-oh! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</strong>
+		  </div>
+		  <div class="focus">
+			<img class="wp-image-1078 alignright" src="http://makenashville.org/wp-content/uploads/2017/10/Screenshot-2017-10-30-15.33.10-300x262.png" alt="" width="369" height="309" />
+
+			Please try the following:
+			<ul>
+				<li>Check your spelling</li>
+				<li><a href="/">Return to the home page</a></li>
+				<li>Click the Back button</li>
+				<li><a href="mailto:info@makenashville.org">Email the admin</a> if something seems wrong</li>
+			</ul>
+		</div>
+      </div>
+  </article>
+
+<?php do_action( 'foundationpress_after_content' ); ?>
+
 </div>
+
 <?php get_footer();

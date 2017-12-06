@@ -759,3 +759,14 @@ article.links {
         }
     }
 }
+
+.not-found {
+    .entry-content {
+        .callout {
+            margin-bottom: 2rem;
+        }
+        font-size: 1.3rem;
+        width: 80%;
+        margin: auto;
+    }
+}
