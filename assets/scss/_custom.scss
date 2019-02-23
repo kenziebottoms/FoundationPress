@@ -129,42 +129,6 @@ input, label {
                 }
             }
         }
-        #contact-bar {
-            font-size: 1.1rem;
-            background: rgba(#fff,.8);
-            .left {
-                float: left;
-            }
-            .right {
-                float: right;
-            }
-            .left, .right {
-                a {
-                    font-weight: normal;
-                    display: inline-block;
-                    padding: .8rem;
-                    font-size: 1.15rem;
-                    color: rgba(#000,.7);
-                    &:hover {
-                        background: rgba(#fff,.7);
-                    }
-                }
-            }
-            .blue a {
-                background: rgba($blue,.7);
-                color: rgba(#fff,.9);
-                &:hover {
-                    background: rgba($blue, .9);
-                }
-            }
-            .red a {
-                background: rgba($red,.7);
-                color: rgba(#fff,.9);
-                &:hover {
-                    background: rgba($red, .9);
-                }
-            }
-        }
     }
 }
 .main-content {
@@ -258,25 +222,6 @@ input, label {
     }
 }
 .home {
-    #featured-hero {
-        .overlay {
-            a.custom-logo-link {
-                img {
-                    height: 250px;
-                    width: 250px;
-                    margin: 6rem auto 3rem auto;
-                    @include breakpoint(medium only) {
-                        margin-top: 3rem;
-                    }
-                    @include breakpoint(small only) {
-                        height: 150px;
-                        width: 150px;
-                        margin: 2rem auto;
-                    }
-                }
-            }
-        }
-    }
     .main-content {
         padding: 0;
         margin: 0;
@@ -338,7 +283,7 @@ input, label {
     width: 100%;
     z-index: 3000;
     background: rgba(#000,.8);
-    font-size: 1.1rem;        
+    font-size: 1.1rem;
     @include breakpoint(large up) {
         position: fixed;
     }
@@ -384,6 +329,37 @@ input, label {
                 @include breakpoint(small only) {
                     padding-left: 2rem !important;
                 }
+            }
+        }
+    }
+    #contact-bar {
+        clear: both;
+        font-size: 1.1rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        background: rgba(#fff, .8);
+        .left, .right {
+            a {
+                font-weight: normal;
+                display: inline-block;
+                padding: .8rem;
+                font-size: 1.15rem;
+                color: rgba(#000,.9);
+            }
+        }
+        .blue a {
+            background: rgba($blue,.7);
+            color: rgba(#fff,.9);
+            &:hover {
+                background: rgba($blue, .9);
+            }
+        }
+        .red a {
+            background: rgba($red,.7);
+            color: rgba(#fff,.9);
+            &:hover {
+                background: rgba($red, .9);
             }
         }
     }

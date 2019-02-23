@@ -7078,17 +7078,10 @@ body#tinymce {
       padding: 1rem; }
 
 #featured-hero {
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 6.25rem; }
-  @media print, screen and (min-width: 40em) {
+  padding-top: 0rem; }
+  @media print, screen and (min-width: 64em) {
     #featured-hero {
-      height: 12.5rem; } }
-  @media screen and (min-width: 75em) {
-    #featured-hero {
-      height: 25rem; } }
+      padding-top: 6rem; } }
 
 .dotted, .section-divider hr {
   border-style: dashed;
@@ -7758,31 +7751,6 @@ input, label {
           width: 130px;
           height: 130px;
           margin: 1rem auto; } }
-    #featured-hero .overlay #contact-bar {
-      font-size: 1.1rem;
-      background: rgba(255, 255, 255, 0.8); }
-      #featured-hero .overlay #contact-bar .left {
-        float: left; }
-      #featured-hero .overlay #contact-bar .right {
-        float: right; }
-      #featured-hero .overlay #contact-bar .left a, #featured-hero .overlay #contact-bar .right a {
-        font-weight: normal;
-        display: inline-block;
-        padding: .8rem;
-        font-size: 1.15rem;
-        color: rgba(0, 0, 0, 0.7); }
-        #featured-hero .overlay #contact-bar .left a:hover, #featured-hero .overlay #contact-bar .right a:hover {
-          background: rgba(255, 255, 255, 0.7); }
-      #featured-hero .overlay #contact-bar .blue a {
-        background: rgba(60, 93, 171, 0.7);
-        color: rgba(255, 255, 255, 0.9); }
-        #featured-hero .overlay #contact-bar .blue a:hover {
-          background: rgba(60, 93, 171, 0.9); }
-      #featured-hero .overlay #contact-bar .red a {
-        background: rgba(174, 71, 66, 0.7);
-        color: rgba(255, 255, 255, 0.9); }
-        #featured-hero .overlay #contact-bar .red a:hover {
-          background: rgba(174, 71, 66, 0.9); }
 
 .main-content {
   padding: 2.5rem 0; }
@@ -7855,19 +7823,6 @@ input, label {
   margin-top: 2rem; }
   .faq .main-content .entry-content {
     margin-top: 1rem; }
-
-.home #featured-hero .overlay a.custom-logo-link img {
-  height: 250px;
-  width: 250px;
-  margin: 6rem auto 3rem auto; }
-  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .home #featured-hero .overlay a.custom-logo-link img {
-      margin-top: 3rem; } }
-  @media screen and (max-width: 39.9375em) {
-    .home #featured-hero .overlay a.custom-logo-link img {
-      height: 150px;
-      width: 150px;
-      margin: 2rem auto; } }
 
 .home .main-content {
   padding: 0;
@@ -7947,6 +7902,34 @@ input, label {
     @media screen and (max-width: 39.9375em) {
       #site-navigation.top-bar .top-bar-right ul.sub-menu a {
         padding-left: 2rem !important; } }
+  #site-navigation.top-bar #contact-bar {
+    clear: both;
+    font-size: 1.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: rgba(255, 255, 255, 0.8); }
+    #site-navigation.top-bar #contact-bar .left a, #site-navigation.top-bar #contact-bar .right a {
+      font-weight: normal;
+      display: inline-block;
+      padding: .8rem;
+      font-size: 1.15rem;
+      color: rgba(0, 0, 0, 0.9); }
+    #site-navigation.top-bar #contact-bar .blue a {
+      background: rgba(60, 93, 171, 0.7);
+      color: rgba(255, 255, 255, 0.9); }
+      #site-navigation.top-bar #contact-bar .blue a:hover {
+        background: rgba(60, 93, 171, 0.9); }
+    #site-navigation.top-bar #contact-bar .red a {
+      background: rgba(174, 71, 66, 0.7);
+      color: rgba(255, 255, 255, 0.9); }
+      #site-navigation.top-bar #contact-bar .red a:hover {
+        background: rgba(174, 71, 66, 0.9); }
   #site-navigation.top-bar ul.menu > li > a, #site-navigation.top-bar .menu > ul > li > a {
     height: auto;
     font: inherit;

@@ -43,6 +43,20 @@
 				<?php foundationpress_top_bar_r(); ?>
 				<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
 			</div>
+
+			<div id="contact-bar">
+					<div class="left">
+							<a target="blank" href="<?php echo get_option('maps_link'); ?>">
+									<?php echo get_option('address1'); ?>
+							</a>
+					</div>
+					<div class="right">
+							<?php $phone = get_option('phone'); ?>
+							<a href="tel:<?php echo $phone; ?>">
+									<?php echo $phone; ?>
+							</a>
+					</div>
+			</div>
 		</nav>
 	</header>
 
