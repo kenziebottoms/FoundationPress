@@ -8223,4 +8223,9 @@ article.links date {
   .not-found .entry-content .callout {
     margin-bottom: 2rem; }
 
+.resp-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; }
+
 /*# sourceMappingURL=foundation.css.map */
